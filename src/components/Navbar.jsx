@@ -5,9 +5,9 @@ const Navbar = () => {
         <div className=" mx-2 py-1 flex justify-between">
             <div className=" flex flex-col items-center justify-between">
 
-                <Image src="/res-logo.png" height='40' width='40' alt='logo' />
-                <span className=" font-rockNroll block">
-
+                <Image src="/res-logo.png" height='35' width='35' alt='logo' />
+                <span className=" text-xs font-rockNroll block">
+                    HungryNaki
                 </span>
             </div>
 
