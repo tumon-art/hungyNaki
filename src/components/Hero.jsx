@@ -3,7 +3,7 @@ import { RiArrowRightSLine, RiCarLine, RiShieldCheckLine } from 'react-icons/ri'
 
 const Hero = () => {
     return (
-        <div className=" md:flex lg:my-8 w-full lg:px-32 md:px-10">
+        <div className=" md:flex my-8 lg:my-8 w-full lg:px-32 md:px-10">
             <div className=" flex flex-col items-center md:items-start">
                 <div className=" font-rockNroll">
                     <p className=" font-bold  text-slate-800
