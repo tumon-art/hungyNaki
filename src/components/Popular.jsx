@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { useState } from "react"
+import products from "../data/products"
 
 const list = [
     { text: 'All' },
@@ -19,6 +20,7 @@ const list = [
 
 const Popular = () => {
     const [Select, setSelect] = useState("All")
+
     return (
         <div className=" font-rockNroll">
             <h1 className=" text-slate-700 text-center 
@@ -45,6 +47,36 @@ const Popular = () => {
                         )
                     })}
                 </ol>
+            </div>
+
+            {/* === SHOW ALL FOOD */}
+            <div className="flex flex-wrap justify-center gap-3">
+                {products.map((e, i) => {
+                    return (
+                        <div key={e.id} className=' relative w-48 h-48 
+                         ring-1 ring-red-100 flex flex-col justify-center rounded-sm '>
+                            <div className=" flex flex-col items-center ">
+                                <Image
+                                    src={e.image01}
+                                    height='70'
+                                    width='70'
+                                    alt='img' />
+                                <p className=" mt-6 text-xs">
+                                    {e.title}
+                                </p>
+                            </div>
+                            <div className=" bottom-3 mt-8 text-center flex justify-between items-center mx-2">
+                                <span className=" text-md font-medium font-sans text-red-600">
+                                    ${Math.floor(e.price)}
+                                </span>
+                                <button className=" text-white bg-red-600 px-3 py-[6px] 
+                               text-xs cursor-pointer rounded">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    )
+                })}
             </div>
         </div>
     )
