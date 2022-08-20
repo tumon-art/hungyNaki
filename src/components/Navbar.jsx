@@ -2,6 +2,7 @@ import Image from "next/image"
 import { useState } from "react"
 import { RiShoppingBasketLine, RiUserLine, RiMenuLine } from "react-icons/ri"
 import Sidebar from "./Sidebar"
+import TopNav from "./TopNav"
 const Navbar = () => {
     const [sidebar, setSidebar] = useState(false)
 
@@ -20,6 +21,8 @@ const Navbar = () => {
                         HungryNaki
                     </span>
                 </div>
+
+                <TopNav />
 
                 <div className=" flex gap-4 items-center text-xl">
                     <span className=" relative">
