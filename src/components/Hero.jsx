@@ -2,7 +2,7 @@ import Image from "next/image"
 
 const Hero = () => {
     return (
-        <div className=" md:flex lg:mt-10 w-full lg:px-32 md:px-10">
+        <div className=" md:flex lg:mt-5 w-full lg:px-32 md:px-10">
             <div className=" flex flex-col items-center md:items-start">
                 <p className=" font-rockNroll md:my-4 md:text-2xl
                  my-2">Easy way to make an order</p>
@@ -38,7 +38,7 @@ const Hero = () => {
             <div className=" flex flex-col items-center">
                 <div className=" flex h-[280px] w-[280px] 
                
-            lg:min-h-[500px lg:min-w-[500px] relative">
+            lg:min-h-[500px] lg:min-w-[500px] relative">
                     <Image src='/hero.png'
                         layout="fill" alt="hero banner"
                         className=" object-fill"
