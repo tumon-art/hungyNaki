@@ -29,11 +29,11 @@ const Navbar = () => {
                         <RiShoppingBasketLine className=" text-xl" />
                         <span className=" absolute bg-red-500 
                     rounded-full h-4 w-4 text-white font-bold
-                     top-[-6px] text-sm flex 
+                     top-[-6px] text-sm flex cursor-pointer
                     justify-center items-center  right-[-6px]">0</span>
                     </span>
-                    <RiUserLine />
-                    <RiMenuLine onClick={toogelSidebar} className=" md:hidden" />
+                    <RiUserLine className=" cursor-pointer" />
+                    <RiMenuLine onClick={toogelSidebar} className=" cursor-pointer md:hidden" />
                 </div>
 
 

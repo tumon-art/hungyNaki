@@ -28,7 +28,6 @@ const Popular = () => {
         return products.category == sort
     })
 
-    console.log(filterd)
     return (
         <section className=" md:mx-20 sm:mx-14 mx-2">
             <div className=" font-rockNroll">
@@ -45,7 +44,8 @@ const Popular = () => {
                                 <li
                                     key={i} className={` 
                             ${Select == e.text && ' text-red-600 bg-white'}
-                             cursor-pointer flex gap-2 items-center px-3 py-1 mx-3 rounded-md `}
+                             cursor-pointer flex gap-2 items-center px-3 py-1 mx-3 
+                             rounded-md hover:underline`}
                                     onClick={() => {
                                         setSelect(`${e.text}`)
                                         setsort(e.text)
@@ -67,7 +67,8 @@ const Popular = () => {
                     {filterd.map((e, i) => {
                         return (
                             <div key={e.id} className=' relative w-44 h-48  sm:w-48 sm:h-48 
-                         ring-1 ring-red-100 flex flex-col justify-center rounded-sm '>
+                         ring-1 ring-red-100 flex flex-col justify-center rounded-sm
+                          hover:ring-2 hover:ring-red-500 transition'>
                                 <div className=" flex flex-col items-center ">
                                     <Image
                                         src={e.image01}
@@ -83,7 +84,7 @@ const Popular = () => {
                                         ${Math.floor(e.price)}
                                     </span>
                                     <button className=" font-sans text-white bg-red-600 px-3 py-[6px] 
-                               text-xs cursor-pointer rounded">
+                                    text-xs rounded cursor-move hover:bg-red-700">
                                         Add to Cart
                                     </button>
                                 </div>
