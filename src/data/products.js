@@ -119,17 +119,17 @@ const products = [
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
   },
 
-  {
-    id: "09",
-    title: "Pizza With Mushroom",
-    price: 110.0,
-    image01: product_04_image_02,
-    image02: product_04_image_01,
-    image03: product_04_image_03,
-    category: "Pizza",
+  // {
+  //   id: "09",
+  //   title: "Pizza With Mushroom",
+  //   price: 110.0,
+  //   image01: product_04_image_02,
+  //   image02: product_04_image_01,
+  //   image03: product_04_image_03,
+  //   category: "Pizza",
 
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
-  },
+  //   desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
+  // },
 
   {
     id: "10",

@@ -20,7 +20,15 @@ const list = [
 
 const Popular = () => {
     const [Select, setSelect] = useState("All")
+    const [sort, setsort] = useState('')
 
+    const filterd = products.filter((products) => {
+        if (sort == '') return products
+        if (sort == 'All') return products
+        return products.category == sort
+    })
+
+    console.log(filterd)
     return (
         <section className=" md:mx-20 sm:mx-14 mx-2">
             <div className=" font-rockNroll">
@@ -34,10 +42,14 @@ const Popular = () => {
                 justify-center">
                         {list.map((e, i) => {
                             return (
-                                <li tabIndex={i} key={i} className={` 
+                                <li
+                                    key={i} className={` 
                             ${Select == e.text && ' text-red-600 bg-white'}
                              cursor-pointer flex gap-2 items-center px-3 py-1 mx-3 rounded-md `}
-                                    onClick={() => setSelect(`${e.text}`)}
+                                    onClick={() => {
+                                        setSelect(`${e.text}`)
+                                        setsort(e.text)
+                                    }}
                                 >
                                     {e.text !== 'All' && (
                                         <Image src={e.img} height='20' width='20'
@@ -52,7 +64,7 @@ const Popular = () => {
 
                 {/* === SHOW ALL FOOD */}
                 <div className=" grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 justify-items-center md:gap-8 lg:gap-14 gap-3 ">
-                    {products.map((e, i) => {
+                    {filterd.map((e, i) => {
                         return (
                             <div key={e.id} className=' relative w-44 h-48  sm:w-48 sm:h-48 
                          ring-1 ring-red-100 flex flex-col justify-center rounded-sm '>
