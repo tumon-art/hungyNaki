@@ -22,7 +22,7 @@ const list = [
 
 const WhyHungry = () => {
     return (
-        <section className=" px-3 my-20 grid items-center sm:grid-cols-2 md:grid-cols-2">
+        <section className=" px-3 my-20 grid justify-items-center items-center sm:grid-cols-2 md:grid-cols-2">
             <div>
                 <Image
                     src="/location.png"
@@ -36,9 +36,9 @@ const WhyHungry = () => {
             <div>
                 <h1 className=" font-rockNroll text-2xl md:text-3xl my-8 font-bold text-red-600">
                     <span className=" text-slate-800">
-                        Why
+                        Why {` `}
                     </span>
-                    Tasty Treat?
+                    HungryNaki?
                 </h1>
 
                 <p className="text-gray-500 md:text-sm mb-10 text-xs">
