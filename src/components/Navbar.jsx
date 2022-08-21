@@ -11,7 +11,7 @@ const Navbar = () => {
     }
     return (
         <>
-            <div className=" mx-2 lg:px-32 md:px-10 md:py-4 py-1 flex justify-between">
+            <div className=" px-2 lg:px-32 md:px-10 md:py-4 py-1 flex justify-between">
                 <div className=" flex flex-col items-center justify-between">
 
                     <span className=" relative h-9 w-9 lg:h-14 lg:w-14">
@@ -38,9 +38,9 @@ const Navbar = () => {
 
 
             </div >
-            <aside>
-                <Sidebar sidebar={sidebar} toogelSidebar={toogelSidebar} />
-            </aside>
+            <Sidebar sidebar={sidebar} toogelSidebar={toogelSidebar} />
+
+
         </>
     )
 }

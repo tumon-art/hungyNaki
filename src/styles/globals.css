@@ -3,6 +3,11 @@
 @tailwind components;
 @tailwind utilities;
 
+#__next {
+  position: relative;
+  overflow: hidden;
+}
+
 .sidebar {
   background-color: rgba(39, 38, 38, 0.432);
 }

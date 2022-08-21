@@ -15,7 +15,7 @@ const Sidebar = ({ toogelSidebar, sidebar }) => {
     const router = useRouter()
 
     return (
-        <div className={`absolute md:hidden ring-8 h-[100vh] sidebar w-[100vw] z-10 top-0
+        <div className={`absolute md:hidden h-[100vh] sidebar w-[100vw] z-10 top-0
          ${sidebar ? "translate-x-0" : " translate-x-[1000px]"}`}
         >
             <div className="absolute   right-0 top-0 h-[100vh] w-full"
