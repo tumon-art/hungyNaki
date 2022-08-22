@@ -22,7 +22,7 @@ const list = [
 
 const WhyHungry = () => {
     return (
-        <section className=" px-3 my-20 grid justify-items-center items-center sm:grid-cols-2 md:grid-cols-2">
+        <section className=" px-3 md:mx-20 my-20 grid justify-items-center items-center sm:grid-cols-2 md:grid-cols-2">
             <div>
                 <Image
                     src="/location.png"

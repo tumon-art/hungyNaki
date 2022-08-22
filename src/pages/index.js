@@ -3,6 +3,7 @@ import FoodCategory from "../components/FoodCategory";
 import Hero from "../components/Hero";
 import HotPizza from "../components/HotPizza";
 import Popular from "../components/Popular";
+import Testimonial from "../components/Testimonial";
 import WhyHungry from "../components/WhyHungry";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <Popular />
       <WhyHungry />
       <HotPizza />
+      <Testimonial />
     </div>
   );
 }
