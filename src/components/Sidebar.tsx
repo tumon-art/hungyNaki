@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 import { list } from '../data/list'
 
 
-const Sidebar = ({ toogelSidebar, sidebar }) => {
+const Sidebar = ({ toogelSidebar, sidebar }:any) => {
 
     useEffect(() => {
         if (sidebar === true) {
