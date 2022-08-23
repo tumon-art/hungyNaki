@@ -47,7 +47,7 @@ const Testimonial = () => {
 
   return (
     <section
-      className=" md:grid mx-20 my-20 justify-center
+      className=" md:grid md:mx-20 my-20 justify-center
          md:grid-cols-2"
     >
       <div className=" my-10 px-3 font-rockNroll">
