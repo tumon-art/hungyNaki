@@ -3,7 +3,7 @@ import Image from "next/image";
 const foods = () => {
   return (
     <section className="">
-      <div className=" w-full h-40 md:h-60 z-[-1] overflow-hidden relative">
+      <div className=" w-full h-40 md:h-48 z-[-1] overflow-hidden relative">
         <Image
           src="/allfoods.jpg"
           height="15"

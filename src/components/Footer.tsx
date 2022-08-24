@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <section id="footer" className="px-10 md:px-20 py-10  bg-red-100">
       <div
-        className="  font-rockNroll flex-wrap flex md:flex-row
+        className="  font-sans flex-wrap flex md:flex-row
        justify-center flex-col gap-10 "
       >
         {/* # 1 */}
@@ -38,10 +38,7 @@ const Footer = () => {
 
         {/* # 2 */}
         <div className=" flex flex-col gap-2">
-          <h1 className=" font-samibold text-sm md:text-base">
-            {" "}
-            Delivery Time{" "}
-          </h1>
+          <h1 className=" font-medium text-sm md:text-base"> Delivery Time </h1>
           <h4 className=" text-xs font-sans font-medium">Sunday - Thursday</h4>
           <p className=" text-[10px] font-sans"> 10:00am - 11:00pm </p>
 
@@ -54,7 +51,7 @@ const Footer = () => {
         {/* # 3 */}
         <div className="">
           <div className=" flex flex-col gap-2">
-            <h3 className=" font-samibold text-sm md:text-base"> Contact </h3>
+            <h3 className=" font-medium text-sm md:text-base"> Contact </h3>
             <p className=" mb-5 font-sans text-[10px]">
               Location: Feni, Mohipal-3100, Bangladesh
             </p>
@@ -68,7 +65,7 @@ const Footer = () => {
         {/* # 4 */}
         <div className="">
           <div className=" flex flex-col items-start gap-2">
-            <h3 className=" font-samibold text-sm md:text-base"> Contact </h3>
+            <h3 className=" font-medium text-sm md:text-base"> Contact </h3>
             <p className=" mb-5 font-sans ">Subscribe our newsletter</p>
 
             <div className="flex flex-col items-center">

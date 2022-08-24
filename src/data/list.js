@@ -5,11 +5,11 @@ export const list = [
   },
   {
     name: "Foods",
-    link: "foods",
+    link: "/foods",
   },
   {
     name: "Cart",
-    link: "cart",
+    link: "/cart",
   },
   {
     name: "Contact",
