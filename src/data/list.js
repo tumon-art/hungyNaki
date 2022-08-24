@@ -13,6 +13,6 @@ export const list = [
   },
   {
     name: "Contact",
-    link: "contact",
+    link: "#footer",
   },
 ];

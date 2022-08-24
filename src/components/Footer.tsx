@@ -9,7 +9,7 @@ import {
 
 const Footer = () => {
   return (
-    <div className="px-10 md:px-20 py-10  bg-red-100">
+    <section id="footer" className="px-10 md:px-20 py-10  bg-red-100">
       <div
         className="  font-rockNroll flex-wrap flex md:flex-row
        justify-center flex-col gap-10 "
@@ -110,7 +110,7 @@ const Footer = () => {
           </span>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 export default Footer;

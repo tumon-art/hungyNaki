@@ -2,8 +2,12 @@ import { IoMdClose } from "react-icons/io";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { list } from "../data/list";
+import Link from "next/link";
+import useStore from "../store/mainStore";
 
-const Sidebar = ({ toogelSidebar, sidebar }: any) => {
+const Sidebar = () => {
+  const { sidebarSwitch, sidebar } = useStore();
+
   useEffect(() => {
     if (sidebar === true) {
       document.getElementsByTagName<any>("BODY")[0].style.overflow = "hidden";
@@ -20,7 +24,7 @@ const Sidebar = ({ toogelSidebar, sidebar }: any) => {
     >
       <div
         className="absolute   right-0 top-0 h-[100vh] w-full"
-        onClick={toogelSidebar}
+        onClick={sidebarSwitch}
       ></div>
       <aside
         className={` ${sidebar ? "translate-x-0" : "translate-x-80"}
@@ -30,7 +34,7 @@ const Sidebar = ({ toogelSidebar, sidebar }: any) => {
       >
         <div className=" bg-red-50  flex items-center justify-center">
           <IoMdClose
-            onClick={toogelSidebar}
+            onClick={sidebarSwitch}
             className=" text-xl cursor-pointer  bg-red-600 rounded-full
                          my-4 ring-2 z-10 ring-red-600  text-white
                          "
@@ -46,11 +50,14 @@ const Sidebar = ({ toogelSidebar, sidebar }: any) => {
             {list.map((e, i) => {
               return (
                 <li
+                  onClick={sidebarSwitch}
                   key={i}
                   className={`${e.link == router.asPath && "text-red-500"}
                                      cursor-pointer hover:text-red-500`}
                 >
-                  {e.name}{" "}
+                  <Link href={e.link}>
+                    <a>{e.name}</a>
+                  </Link>
                 </li>
               );
             })}

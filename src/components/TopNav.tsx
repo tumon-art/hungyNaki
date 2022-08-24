@@ -1,8 +1,12 @@
 import { list } from "../data/list";
 import { useRouter } from "next/router";
+import useStore from "../store/mainStore";
+import Link from "next/link";
 
 const TopNav = () => {
+  // const sidebarSwitch = useStore((state: any) => state.sidebarSwitch);
   const router = useRouter();
+
   return (
     <ol className=" md:flex items-center gap-8 font-medium hidden ">
       {list.map((e, i) => {
@@ -15,7 +19,9 @@ const TopNav = () => {
             }
                     cursor-pointer hover:text-red-500`}
           >
-            {e.name}
+            <Link href={e.link}>
+              <a>{e.name}</a>
+            </Link>
           </li>
         );
       })}
