@@ -1,7 +1,6 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '-': ^0.0.1
   '@types/node': 18.7.11
   '@types/react': 18.0.17
   '@types/react-dom': 18.0.6
@@ -18,9 +17,9 @@ specifiers:
   slick-carousel: ^1.8.1
   tailwindcss: ^3.1.8
   typescript: ^4.7.4
+  zustand: ^4.1.1
 
 dependencies:
-  '-': 0.0.1
   '@types/react-slick': 0.23.10
   next: 12.2.5_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
@@ -28,6 +27,7 @@ dependencies:
   react-icons: 4.4.0_react@18.2.0
   react-slick: 0.29.0_biqbaboplfbrettd7655fr4n2y
   slick-carousel: 1.8.1
+  zustand: 4.1.1_react@18.2.0
 
 devDependencies:
   '@types/node': 18.7.11
@@ -41,10 +41,6 @@ devDependencies:
   typescript: 4.7.4
 
 packages:
-
-  /-/0.0.1:
-    resolution: {integrity: sha512-3HfneK3DGAm05fpyj20sT3apkNcvPpCuccOThOPdzz8sY7GgQGe0l93XH9bt+YzibcTIgUAIMoyVJI740RtgyQ==}
-    dev: false
 
   /@babel/runtime-corejs3/7.18.9:
     resolution: {integrity: sha512-qZEWeccZCrHA2Au4/X05QW5CMdm4VjUDCrGq5gf1ZDcM4hRqreKrtwAn7yci9zfgAS9apvnsFXiGBHBAxZdK9A==}
@@ -2267,3 +2263,19 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: true
+
+  /zustand/4.1.1_react@18.2.0:
+    resolution: {integrity: sha512-h4F3WMqsZgvvaE0n3lThx4MM81Ls9xebjvrABNzf5+jb3/03YjNTSgZXeyrvXDArMeV9untvWXRw1tY+ntPYbA==}
+    engines: {node: '>=12.7.0'}
+    peerDependencies:
+      immer: '>=9.0'
+      react: '>=16.8'
+    peerDependenciesMeta:
+      immer:
+        optional: true
+      react:
+        optional: true
+    dependencies:
+      react: 18.2.0
+      use-sync-external-store: 1.2.0_react@18.2.0
+    dev: false
