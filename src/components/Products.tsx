@@ -16,7 +16,7 @@ export interface Products {
 
 const Products = ({ products }: Products) => {
   return (
-    <div className=" flex justify-center items-center my-10 mx-10 gap-10 flex-wrap">
+    <div className=" flex justify-center items-center my-10 gap-10 flex-wrap">
       {products.map((products) => {
         return (
           <div
