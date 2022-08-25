@@ -10,13 +10,33 @@ const Foods: NextPage = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [postsPerPage] = useState<number>(6);
   const [searchText, setsearchText] = useState<string>("");
+  const [sort, setsort] = useState<string>("");
+
+  // SORT LOW TO HIGH
+  const lowToHigh = () =>
+    products.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
+
+  // SORT HIGH TO LOW
+  const highToLow = () =>
+    products.sort((a, b) => parseFloat(b.price) - parseFloat(a.price));
+
+  // SELECT HANDLE
+  const selectHandle = (e) => {
+    const value = e.target.value;
+
+    // SET STATES
+    if (value == "lowToHigh") setsort("lowToHigh");
+    if (value == "highToLow") setsort("highToLow");
+  };
+
+  // CALL SORT FUNCTIONS
+  if (sort == "lowToHigh") lowToHigh();
+  if (sort == "highToLow") highToLow();
 
   // Get current posts
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = products.slice(indexOfFirstPost, indexOfLastPost);
-
-  // console.log(indexOfLastPost, indexOfFirstPost, currentPosts);
 
   // Change page
   const paginate = (pageNumber: number) => {
@@ -63,6 +83,17 @@ const Foods: NextPage = () => {
               />
               <RiSearchLine className=" text-gray-500 text-xl" />
             </div>
+          </div>
+
+          <div>
+            <select defaultValue="" onChange={selectHandle}>
+              <option disabled value="">
+                {" "}
+                Sort Foods{" "}
+              </option>
+              <option value={"lowToHigh"}> Low To High </option>
+              <option value={"highToLow"}> High To Low </option>
+            </select>
           </div>
         </div>
         <Products
