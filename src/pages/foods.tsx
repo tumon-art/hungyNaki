@@ -69,7 +69,7 @@ const Foods: NextPage = () => {
       </div>
 
       <div className=" md:mx-32">
-        <div className=" flex justify-center my-10">
+        <div className=" flex flex-col items-center gap-y-10  my-10">
           <div className=" md:w-2/6">
             <div
               className=" flex rounded-sm px-4 ring-2
@@ -86,7 +86,13 @@ const Foods: NextPage = () => {
           </div>
 
           <div>
-            <select defaultValue="" onChange={selectHandle}>
+            <select
+              className={` py-1 outline-none ring-2 ring-gray-300 focus:ring-2
+       focus:ring-zinc-400 text-sm bg-zinc-200 text-zinc-800
+      rounded-sm`}
+              defaultValue=""
+              onChange={selectHandle}
+            >
               <option disabled value="">
                 {" "}
                 Sort Foods{" "}
