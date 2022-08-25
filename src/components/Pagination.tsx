@@ -29,14 +29,13 @@ const Pagination = ({
       </div>
       {pageNumbers.map((e) => (
         <div
+          onClick={() => paginate(e)}
           className={` hover:bg-red-800 hover:text-white transition-colors
           cursor-pointer px-2 ring-red-600 ring-2 text-sm
           ${currentPage == e && "bg-red-600 text-white"}`}
           key={e}
         >
-          <a onClick={() => paginate(e)} className="page-link">
-            {e}
-          </a>
+          <span>{e}</span>
         </div>
       ))}
       <div

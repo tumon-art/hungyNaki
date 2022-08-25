@@ -8,6 +8,7 @@ import products from "../data/products";
 const Foods: NextPage = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [postsPerPage] = useState<number>(6);
+  const [searchText, setsearchText] = useState<string>("");
 
   // Get current posts
   const indexOfLastPost = currentPage * postsPerPage;
@@ -45,8 +46,21 @@ const Foods: NextPage = () => {
           All Food{" "}
         </span>
       </div>
-
-      <Products products={currentPosts} />
+      <div className=" md:mx-10 md:my-10">
+        <input
+          className=" py-2 pl-4 ring-2 ring-red-600 rounded-md"
+          onChange={(e) => setsearchText(e.target.value.toLowerCase())}
+          placeholder="Type to Search"
+          type="text"
+        />
+      </div>
+      <Products
+        products={
+          searchText.length > 0
+            ? products.filter((e) => e.title.toLowerCase().includes(searchText))
+            : currentPosts
+        }
+      />
       <Pagination
         currentPage={currentPage}
         postsPerPage={postsPerPage}
