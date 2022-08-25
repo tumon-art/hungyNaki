@@ -18,7 +18,6 @@ const Foods: NextPage = () => {
 
   // Change page
   const paginate = (pageNumber: number) => {
-    console.log(currentPage);
     setCurrentPage(pageNumber);
   };
 
