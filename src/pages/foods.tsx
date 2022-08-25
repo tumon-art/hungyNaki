@@ -48,7 +48,7 @@ const Foods: NextPage = () => {
         </span>
       </div>
 
-      <div className=" mx-32">
+      <div className=" md:mx-32">
         <div className=" flex justify-center my-10">
           <div className=" md:w-2/6">
             <div
