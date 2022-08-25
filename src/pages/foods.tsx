@@ -1,19 +1,27 @@
+import { NextPage } from "next";
 import Image from "next/image";
 import { useState } from "react";
+import Pagination from "../components/Pagination";
 import Products from "../components/Products";
 import products from "../data/products";
 
-const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-const Foods = () => {
-  const [currentPage, setCurrentPage] = useState<number>(2);
-  const [postsPerPage] = useState<number>(3);
+const Foods: NextPage = () => {
+  const [currentPage, setCurrentPage] = useState<number>(1);
+  const [postsPerPage] = useState<number>(6);
 
   // Get current posts
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentPosts = arr.slice(indexOfFirstPost, indexOfLastPost);
+  const currentPosts = products.slice(indexOfFirstPost, indexOfLastPost);
 
-  console.log(indexOfLastPost, indexOfFirstPost, currentPosts);
+  // console.log(indexOfLastPost, indexOfFirstPost, currentPosts);
+
+  // Change page
+  const paginate = (pageNumber: number) => {
+    console.log(currentPage);
+    setCurrentPage(pageNumber);
+  };
+
   return (
     <section className="">
       <div className=" w-full h-40 md:h-48 z-[-1] overflow-hidden relative">
@@ -39,7 +47,13 @@ const Foods = () => {
         </span>
       </div>
 
-      <Products products={products} />
+      <Products products={currentPosts} />
+      <Pagination
+        currentPage={currentPage}
+        postsPerPage={postsPerPage}
+        totalPosts={products.length}
+        paginate={paginate}
+      />
     </section>
   );
 };
