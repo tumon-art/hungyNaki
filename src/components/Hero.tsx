@@ -7,7 +7,7 @@ import {
 
 const Hero = () => {
   return (
-    <div className=" md:flex my-20 md:my-32 w-full lg:px-32 md:px-10">
+    <div className=" md:flex my-20 w-full lg:px-32 md:px-10">
       <div className=" flex flex-col items-center md:items-start">
         <div className=" font-rockNroll">
           <p

@@ -21,8 +21,10 @@ const Navbar = () => {
 
     let head = document.getElementById("head") as HTMLElement;
 
-    if (visible == true) head.style.transform = "translateY(0px)";
-    else head.style.transform = "translateY(-200px)";
+    if (head) {
+      if (visible == true) head.style.transform = "translateY(0px)";
+      else head.style.transform = "translateY(-200px)";
+    }
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -31,7 +33,6 @@ const Navbar = () => {
   return (
     <>
       <div
-        id="head"
         className={` transition-all z-30 top-0 bg-white w-full lg:px-32 md:px-10
       md:py-4 py-1 flex justify-between ${position > 200 && " shadow-md"}`}
       >
