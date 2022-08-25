@@ -1,6 +1,19 @@
 import Image from "next/image";
+import { useState } from "react";
+import Products from "../components/Products";
+import products from "../data/products";
 
-const foods = () => {
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+const Foods = () => {
+  const [currentPage, setCurrentPage] = useState<number>(2);
+  const [postsPerPage] = useState<number>(3);
+
+  // Get current posts
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = arr.slice(indexOfFirstPost, indexOfLastPost);
+
+  console.log(indexOfLastPost, indexOfFirstPost, currentPosts);
   return (
     <section className="">
       <div className=" w-full h-40 md:h-48 z-[-1] overflow-hidden relative">
@@ -25,7 +38,9 @@ const foods = () => {
           All Food{" "}
         </span>
       </div>
+
+      <Products products={products} />
     </section>
   );
 };
-export default foods;
+export default Foods;
