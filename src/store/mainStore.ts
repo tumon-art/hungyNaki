@@ -1,6 +1,5 @@
 import create from "zustand";
 import { Products } from "../components/Products";
-import Cart from "../pages/cart";
 import { toast } from "react-hot-toast";
 
 interface Store {
@@ -10,6 +9,8 @@ interface Store {
   setShowCart: (state: boolean) => void;
   cartItems: Products[];
   setCartItems: (state: Products, quantity: number) => any;
+  totalPrice: number;
+  totalQantity: number;
 }
 
 const useStore = create<Store>((set) => ({
@@ -17,13 +18,20 @@ const useStore = create<Store>((set) => ({
   sidebarSwitch: () => set((state) => ({ sidebar: !state.sidebar })),
   showCart: false,
   setShowCart: () => set((state) => ({ showCart: !state.showCart })),
+  totalPrice: 0,
+  totalQantity: 0,
   cartItems: [],
   setCartItems: (product: Products, quantity: number) =>
     set((state) => {
       let isDuplicat = state.cartItems.find((e) => e.id == product.id);
+
       if (isDuplicat == undefined) {
         toast.success(`${quantity} ${product.title} added to your Cart`);
-        return { cartItems: [...state.cartItems, product] };
+        return {
+          totalQantity: state.totalQantity + quantity,
+          totalPrice: state.totalPrice + product.price * quantity,
+          cartItems: [...state.cartItems, product],
+        };
       }
 
       if (isDuplicat) {
@@ -32,6 +40,8 @@ const useStore = create<Store>((set) => ({
         );
         toast.success(`${quantity} ${product.title} added to your Cart`);
         return {
+          totalQantity: state.totalQantity + quantity,
+          totalPrice: state.totalPrice + product.price * quantity,
           cartItems: [
             ...oldItems,
             { ...isDuplicat, quantity: isDuplicat.quantity + quantity },
