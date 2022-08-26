@@ -1,5 +1,7 @@
 import create from "zustand";
 import { Products } from "../components/Products";
+import Cart from "../pages/cart";
+import { toast } from "react-hot-toast";
 
 interface Store {
   sidebar: boolean;
@@ -7,7 +9,7 @@ interface Store {
   showCart: boolean;
   setShowCart: (state: boolean) => void;
   cartItems: Products[];
-  setCartItems: (state: Products) => any;
+  setCartItems: (state: Products, quantity: number) => any;
 }
 
 const useStore = create<Store>((set) => ({
@@ -16,10 +18,29 @@ const useStore = create<Store>((set) => ({
   showCart: false,
   setShowCart: () => set((state) => ({ showCart: !state.showCart })),
   cartItems: [],
-  setCartItems: (payload: Products) =>
-    set((state) => ({
-      cartItems: [...state.cartItems, payload],
-    })),
+  setCartItems: (product: Products, quantity: number) =>
+    set((state) => {
+      let isDuplicat = state.cartItems.find((e) => e.id == product.id);
+      if (isDuplicat == undefined) {
+        toast.success(`${quantity} ${product.title} added to your Cart`);
+        return { cartItems: [...state.cartItems, product] };
+      }
+
+      if (isDuplicat) {
+        const oldItems = state.cartItems.filter(
+          (item) => item.id !== product.id
+        );
+        toast.success(`${quantity} ${product.title} added to your Cart`);
+        return {
+          cartItems: [
+            ...oldItems,
+            { ...isDuplicat, quantity: isDuplicat.quantity + quantity },
+          ],
+        };
+      }
+
+      return { cartItems: [...state.cartItems] };
+    }),
 }));
 
 export default useStore;

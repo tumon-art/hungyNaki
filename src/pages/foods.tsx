@@ -74,7 +74,7 @@ const Foods: NextPage = () => {
 
       <div className=" md:mx-32">
         <div className=" flex flex-col items-center gap-y-4  mt-6">
-          <div className=" md:w-2/6">
+          <div className=" lg:w-3/6">
             <div
               className=" flex rounded-sm px-4 ring-2
         justify-between ring-gray-200 items-center"

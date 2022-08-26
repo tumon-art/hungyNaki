@@ -9,11 +9,13 @@ export interface Products {
   image02: StaticImageData;
   image03: StaticImageData;
   category: string;
+  quantity: number;
   desc: string;
 }
 
 const Products = ({ products }: { products: Products[] }) => {
   const { cartItems, setCartItems } = useStore();
+
   console.log(cartItems);
   return (
     <div className=" flex justify-center items-center my-10 gap-3 md:gap-10 flex-wrap">
@@ -22,8 +24,8 @@ const Products = ({ products }: { products: Products[] }) => {
           <div
             key={products.id}
             className=" relative w-40 h-48  sm:w-48 sm:h-48 
-                       ring-1 ring-red-100 flex flex-col justify-center rounded-sm
-                        hover:ring-2 hover:ring-red-500 transition"
+            ring-1 ring-red-100 flex flex-col justify-center rounded-sm
+            hover:ring-2 hover:ring-red-500 transition"
           >
             <div className=" flex flex-col items-center ">
               <Image src={products.image01} height="70" width="70" alt="img" />
@@ -34,9 +36,9 @@ const Products = ({ products }: { products: Products[] }) => {
                 ${Math.floor(products.price)}
               </span>
               <button
-                onClick={() => setCartItems(products)}
+                onClick={() => setCartItems(products, 1)}
                 className=" font-sans text-white bg-red-600 px-3 py-[6px] 
-                                  text-xs rounded cursor-move hover:bg-red-700"
+                text-xs rounded cursor-pointer hover:bg-red-700"
               >
                 Add to Cart
               </button>
