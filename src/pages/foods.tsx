@@ -14,14 +14,18 @@ const Foods: NextPage = () => {
 
   // SORT LOW TO HIGH
   const lowToHigh = () =>
-    products.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
+    products.sort(
+      (a, b) => parseFloat(a.price.toString()) - parseFloat(b.price.toString())
+    );
 
   // SORT HIGH TO LOW
   const highToLow = () =>
-    products.sort((a, b) => parseFloat(b.price) - parseFloat(a.price));
+    products.sort(
+      (a, b) => parseFloat(b.price.toString()) - parseFloat(a.price.toString())
+    );
 
   // SELECT HANDLE
-  const selectHandle = (e) => {
+  const selectHandle = (e: any) => {
     const value = e.target.value;
 
     // SET STATES
