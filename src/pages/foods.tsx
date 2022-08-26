@@ -73,25 +73,27 @@ const Foods: NextPage = () => {
       </div>
 
       <div className=" md:mx-32">
-        <div className=" flex flex-col items-center gap-y-10  my-10">
+        <div className=" flex flex-col items-center gap-y-4  mt-6">
           <div className=" md:w-2/6">
             <div
               className=" flex rounded-sm px-4 ring-2
         justify-between ring-gray-200 items-center"
             >
               <input
-                className=" outline-none py-2 rounded-md"
+                className=" outline-none py-1 md:py-2 rounded-md
+                placeholder:text-sm md:placeholder:text-base
+                "
                 onChange={(e) => setsearchText(e.target.value.toLowerCase())}
                 placeholder="Type to Search"
                 type="text"
               />
-              <RiSearchLine className=" text-gray-500 text-xl" />
+              <RiSearchLine className=" text-gray-500 text-base md:text-xl" />
             </div>
           </div>
 
           <div>
             <select
-              className={` py-1 outline-none ring-2 ring-gray-300 focus:ring-2
+              className={` md:py-1 outline-none ring-2 ring-gray-300 focus:ring-2
        focus:ring-zinc-400 text-sm bg-zinc-200 text-zinc-800
       rounded-sm`}
               defaultValue=""
