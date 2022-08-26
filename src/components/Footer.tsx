@@ -9,7 +9,7 @@ import {
 
 const Footer = () => {
   return (
-    <section id="footer" className="px-10 md:px-20 py-10  bg-red-100">
+    <section id="footer" className="px-4 md:px-20 py-10  bg-red-100">
       <div
         className="  font-sans flex-wrap flex md:flex-row
        justify-center flex-col gap-10 "

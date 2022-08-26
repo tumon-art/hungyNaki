@@ -1,20 +1,20 @@
 import Image, { StaticImageData } from "next/image";
+import useStore from "../store/mainStore";
 
 export interface Products {
-  products: {
-    id: string;
-    title: string;
-    price: number;
-    image01: StaticImageData;
-    image02: StaticImageData;
-    image03: StaticImageData;
-    category: string;
-
-    desc: string;
-  }[];
+  id: string;
+  title: string;
+  price: number;
+  image01: StaticImageData;
+  image02: StaticImageData;
+  image03: StaticImageData;
+  category: string;
+  desc: string;
 }
 
-const Products = ({ products }: Products) => {
+const Products = ({ products }: { products: Products[] }) => {
+  const { cartItems, setCartItems } = useStore();
+  console.log(cartItems);
   return (
     <div className=" flex justify-center items-center my-10 gap-3 md:gap-10 flex-wrap">
       {products.map((products) => {
@@ -34,6 +34,7 @@ const Products = ({ products }: Products) => {
                 ${Math.floor(products.price)}
               </span>
               <button
+                onClick={() => setCartItems(products)}
                 className=" font-sans text-white bg-red-600 px-3 py-[6px] 
                                   text-xs rounded cursor-move hover:bg-red-700"
               >
