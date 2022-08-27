@@ -4,10 +4,11 @@ import { useEffect } from "react";
 import { list } from "../data/list";
 import Link from "next/link";
 import useStore from "../store/mainStore";
+import CartItems from "./CartItems";
 
 const Cart = () => {
   const { cart, setCart, totalPrice } = useStore();
-
+  console.log(totalPrice);
   useEffect(() => {
     if (cart === true) {
       document.getElementsByTagName<any>("BODY")[0].style.overflow = "hidden";
@@ -39,7 +40,9 @@ const Cart = () => {
             my-4 ring-2 z-10 ring-red-600  text-white"
             />
           </div>
-          CART
+
+          <CartItems />
+
           <footer className=" absolute justify-between px-3 text-white font-rockNroll bottom-0 flex items-center bg-red-600 h-14 w-full">
             <div className=" flex items-center gap-1">
               <span>Subtotal: {``} </span>

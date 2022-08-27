@@ -14,8 +14,7 @@ export interface Products {
 }
 
 const Products = ({ products }: { products: Products[] }) => {
-  const { setCartItems } = useStore();
-
+  const { setCartItems, cartItems } = useStore();
   return (
     <div className=" flex justify-center items-center my-10 gap-3 md:gap-10 flex-wrap">
       {products.map((product) => {

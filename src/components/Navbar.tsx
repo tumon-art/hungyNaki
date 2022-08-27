@@ -13,24 +13,24 @@ const Navbar = () => {
   console.log(cart);
   useEffect(() => setPosition(window.scrollY), []);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      let moving = window.scrollY;
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     let moving = window.scrollY;
 
-      setVisible(position > moving);
-      setPosition(moving);
-    };
+  //     setVisible(position > moving);
+  //     setPosition(moving);
+  //   };
 
-    let head = document.getElementById("head") as HTMLElement;
+  //   let head = document.getElementById("head") as HTMLElement;
 
-    if (head) {
-      if (visible == true) head.style.transform = "translateY(0px)";
-      else head.style.transform = "translateY(-200px)";
-    }
+  //   if (head) {
+  //     if (visible == true) head.style.transform = "translateY(0px)";
+  //     else head.style.transform = "translateY(-200px)";
+  //   }
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [position]);
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, [position]);
 
   return (
     <>
