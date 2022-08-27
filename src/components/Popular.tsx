@@ -18,6 +18,7 @@ const list = [
     img: "/bread.png",
   },
 ];
+
 const Popular = () => {
   const [Select, setSelect] = useState("All");
   const [sort, setsort] = useState("");
@@ -50,9 +51,9 @@ const Popular = () => {
                 <li
                   key={i}
                   className={` 
-                            ${Select == e.text && " text-red-600 bg-white"}
-                             cursor-pointer flex gap-2 items-center px-3 py-1 mx-3 
-                             rounded-md hover:underline`}
+                  ${Select == e.text && " text-red-600 bg-white"}
+                  cursor-pointer flex gap-2 items-center px-3 py-1 mx-3 
+                  rounded-md hover:underline`}
                   onClick={() => {
                     setSelect(`${e.text}`);
                     setsort(e.text);
@@ -66,6 +67,7 @@ const Popular = () => {
                       alt="icodn"
                     />
                   )}
+
                   <span> {e.text} </span>
                 </li>
               );

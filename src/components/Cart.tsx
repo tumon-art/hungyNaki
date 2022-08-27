@@ -6,7 +6,7 @@ import Link from "next/link";
 import useStore from "../store/mainStore";
 
 const Cart = () => {
-  const { cart, setCart } = useStore();
+  const { cart, setCart, totalPrice } = useStore();
 
   useEffect(() => {
     if (cart === true) {
@@ -19,8 +19,8 @@ const Cart = () => {
 
   return (
     <div
-      className={`absolute h-[100vh] sidebar w-[100vw] z-10 top-0
-         ${cart ? "translate-x-0" : " translate-x-[2000px]"}`}
+      className={` absolute h-[100vh] sidebar w-[100vw] z-10 top-0
+      ${cart ? "translate-x-0" : " translate-x-[2000px]"}`}
     >
       <div
         className="absolute  right-0 top-0 h-[100vh] w-full"
@@ -28,19 +28,32 @@ const Cart = () => {
       ></div>
       <aside
         className={` ${cart ? "translate-x-0" : "translate-x-80"}
-                right-0  absolute transition-transform
-                duration-200 top-0 bg-white h-[100vh]  w-2/4
-                `}
+        right-0  absolute transition-transform flex flex-col
+        duration-200 top-0 bg-white h-[100vh]  w-4/6 md:w-2/6`}
       >
-        <div className=" bg-red-50  flex items-center justify-center">
-          <IoMdClose
-            onClick={setCart}
-            className=" text-xl cursor-pointer  bg-red-600 rounded-full
-                         my-4 ring-2 z-10 ring-red-600  text-white
-                         "
-          />
+        <div className=" relative w-full h-full">
+          <div className=" bg-red-100  flex items-center justify-center">
+            <IoMdClose
+              onClick={setCart}
+              className=" text-xl cursor-pointer  bg-red-600 rounded-full
+            my-4 ring-2 z-10 ring-red-600  text-white"
+            />
+          </div>
+          CART
+          <footer className=" absolute justify-between px-3 text-white font-rockNroll bottom-0 flex items-center bg-red-600 h-14 w-full">
+            <div className=" flex items-center gap-1">
+              <span>Subtotal: {``} </span>
+              <span className=" text-xl">${totalPrice}</span>
+            </div>
+
+            <button
+              className=" bg-white 
+            px-2 pb-[2px] rounded-md text-gray-900"
+            >
+              Checkout
+            </button>
+          </footer>
         </div>
-        CART
       </aside>
     </div>
   );
