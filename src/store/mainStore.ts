@@ -3,6 +3,8 @@ import { Products } from "../components/Products";
 import { toast } from "react-hot-toast";
 
 interface Store {
+  cart: boolean;
+  setCart: () => void;
   sidebar: boolean;
   sidebarSwitch: (state: any) => void;
   showCart: boolean;
@@ -14,6 +16,8 @@ interface Store {
 }
 
 const useStore = create<Store>((set) => ({
+  cart: false,
+  setCart: () => set((state) => ({ cart: !state.cart })),
   sidebar: false,
   sidebarSwitch: () => set((state) => ({ sidebar: !state.sidebar })),
   showCart: false,

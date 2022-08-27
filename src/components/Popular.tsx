@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import products from "../data/products";
+import useStore from "../store/mainStore";
 
 const list = [
   { text: "All" },
@@ -17,10 +18,11 @@ const list = [
     img: "/bread.png",
   },
 ];
-
 const Popular = () => {
   const [Select, setSelect] = useState("All");
   const [sort, setsort] = useState("");
+
+  const { setCartItems } = useStore();
 
   const filterd = products.filter((products) => {
     if (sort == "") return products;
@@ -73,25 +75,31 @@ const Popular = () => {
 
         {/* === SHOW ALL FOOD */}
         <div className=" grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 justify-items-center md:gap-8 lg:gap-14 gap-3 ">
-          {filterd.map((e, i) => {
+          {filterd.map((product, i) => {
             return (
               <div
-                key={e.id}
+                key={product.id}
                 className=" relative w-40 h-48  sm:w-48 sm:h-48 
-                         ring-1 ring-red-100 flex flex-col justify-center rounded-sm
-                          hover:ring-2 hover:ring-red-500 transition"
+                ring-1 ring-red-100 flex flex-col justify-center rounded-sm
+                hover:ring-2 hover:ring-red-500 transition"
               >
                 <div className=" flex flex-col items-center ">
-                  <Image src={e.image01} height="70" width="70" alt="img" />
-                  <p className=" mt-6 text-xs">{e.title}</p>
+                  <Image
+                    src={product.image01}
+                    height="70"
+                    width="70"
+                    alt="img"
+                  />
+                  <p className=" mt-6 text-xs">{product.title}</p>
                 </div>
                 <div className=" bottom-3 mt-8 text-center flex justify-between items-center mx-2">
                   <span className=" text-md font-medium font-sans text-red-600">
-                    ${Math.floor(e.price)}
+                    ${Math.floor(product.price)}
                   </span>
                   <button
+                    onClick={() => setCartItems(product, 1)}
                     className=" font-sans text-white bg-red-600 px-3 py-[6px] 
-                                    text-xs rounded cursor-move hover:bg-red-700"
+                    text-xs rounded cursor-pointer hover:bg-red-700"
                   >
                     Add to Cart
                   </button>

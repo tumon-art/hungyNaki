@@ -22,8 +22,9 @@ import product_05_image_03 from "../../public/product_09.jpg";
 import product_06_image_01 from "../../public/bread(1).png";
 import product_06_image_02 from "../../public/bread(2).png";
 import product_06_image_03 from "../../public/bread(3).png";
+import { Products } from "../components/Products";
 
-const products = [
+const products: Products[] = [
   {
     id: "01",
     title: "Chicken Burger",

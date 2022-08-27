@@ -2,13 +2,15 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { RiShoppingBasketLine, RiUserLine, RiMenuLine } from "react-icons/ri";
 import useStore from "../store/mainStore";
+import Cart from "./Cart";
 import Sidebar from "./Sidebar";
 import TopNav from "./TopNav";
 const Navbar = () => {
-  const { sidebarSwitch, sidebar } = useStore();
+  const { sidebarSwitch, sidebar, cart, setCart, totalQantity } = useStore();
   const [position, setPosition] = useState<number>(0);
   const [visible, setVisible] = useState<boolean>(true);
 
+  console.log(cart);
   useEffect(() => setPosition(window.scrollY), []);
 
   useEffect(() => {
@@ -32,6 +34,7 @@ const Navbar = () => {
 
   return (
     <>
+      <Cart />
       <div
         className={` transition-all z-30 top-0 bg-white w-full lg:px-32 md:px-10
       md:py-4 py-1 flex justify-between ${position > 200 && " shadow-md"}`}
@@ -45,19 +48,17 @@ const Navbar = () => {
             HungryNaki
           </span>
         </div>
-
         <TopNav />
-
         <div className=" pr-2 flex gap-4 items-center text-xl">
-          <span className=" relative">
+          <span onClick={setCart} className=" cursor-pointer relative">
             <RiShoppingBasketLine className=" text-xl" />
             <span
               className=" absolute bg-red-500
                     rounded-full h-4 w-4 text-white font-bold
-                     top-[-6px] text-sm flex cursor-pointer
+                     top-[-6px] text-sm flex 
                     justify-center items-center  right-[-6px]"
             >
-              0
+              {totalQantity}
             </span>
           </span>
           <RiUserLine className=" cursor-pointer" />
@@ -66,6 +67,7 @@ const Navbar = () => {
             className=" cursor-pointer md:hidden"
           />
         </div>
+
         <Sidebar />
       </div>
 
@@ -98,7 +100,7 @@ const Navbar = () => {
                      top-[-6px] text-sm flex cursor-pointer
                     justify-center items-center  right-[-6px]"
               >
-                0
+                {totalQantity}
               </span>
             </span>
             <RiUserLine className=" cursor-pointer" />
