@@ -14,6 +14,7 @@ export default function Home() {
       <Desc2 />
       <Popular />
       <WhyHungry />
+
       <HotPizza />
       <Testimonial />
     </div>

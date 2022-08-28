@@ -13,6 +13,7 @@ interface Store {
   setCartItems: (state: Products, quantity: number) => any;
   totalPrice: number;
   totalQantity: number;
+  onRemove: (state: Products) => void;
 }
 
 const useStore = create<Store>((set) => ({
@@ -54,6 +55,21 @@ const useStore = create<Store>((set) => ({
       }
 
       return { cartItems: [...state.cartItems] };
+    }),
+  onRemove: (product) =>
+    set((state) => {
+      const foundProduct: Products | any = state.cartItems.find(
+        (item) => item.id === product.id
+      );
+      const oldCart: Products[] = state.cartItems.filter(
+        (item) => item.id !== product.id
+      );
+      return {
+        totalPrice:
+          state.totalPrice - foundProduct.quantity * foundProduct.price,
+        totalQantity: state.totalQantity - foundProduct.quantity,
+        cartItems: oldCart,
+      };
     }),
 }));
 

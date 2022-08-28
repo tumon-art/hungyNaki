@@ -8,7 +8,6 @@ import CartItems from "./CartItems";
 
 const Cart = () => {
   const { cart, setCart, totalPrice } = useStore();
-  console.log(totalPrice);
   useEffect(() => {
     if (cart === true) {
       document.getElementsByTagName<any>("BODY")[0].style.overflow = "hidden";

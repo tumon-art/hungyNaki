@@ -10,7 +10,6 @@ const Navbar = () => {
   const [position, setPosition] = useState<number>(0);
   const [visible, setVisible] = useState<boolean>(true);
 
-  console.log(cart);
   useEffect(() => setPosition(window.scrollY), []);
 
   // useEffect(() => {
