@@ -1,6 +1,7 @@
 import create from "zustand";
 import { Products } from "../components/Products";
 import { toast } from "react-hot-toast";
+import products from "../data/products";
 
 interface Store {
   cart: boolean;
@@ -10,10 +11,11 @@ interface Store {
   showCart: boolean;
   setShowCart: (state: boolean) => void;
   cartItems: Products[];
-  setCartItems: (state: Products, quantity: number) => any;
+  setCartItems: (product: Products, quantity: number) => any;
   totalPrice: number;
   totalQantity: number;
-  onRemove: (state: Products) => void;
+  onRemove: (id: string) => void;
+  toggleQuantity: (id: string, value: "dec" | "inc") => void;
 }
 
 const useStore = create<Store>((set) => ({
@@ -56,13 +58,16 @@ const useStore = create<Store>((set) => ({
 
       return { cartItems: [...state.cartItems] };
     }),
-  onRemove: (product) =>
+  onRemove: (id) =>
     set((state) => {
       const foundProduct: Products | any = state.cartItems.find(
-        (item) => item.id === product.id
+        (item) => item.id === id
       );
       const oldCart: Products[] = state.cartItems.filter(
-        (item) => item.id !== product.id
+        (item) => item.id !== id
+      );
+      toast.error(
+        `${foundProduct.quantity} ${foundProduct.title} removed from your Cart!`
       );
       return {
         totalPrice:
@@ -70,6 +75,45 @@ const useStore = create<Store>((set) => ({
         totalQantity: state.totalQantity - foundProduct.quantity,
         cartItems: oldCart,
       };
+    }),
+  toggleQuantity: (id, value) =>
+    set((state) => {
+      const foundProduct: Products | any = state.cartItems.find(
+        (product) => product.id === id
+      );
+
+      const index = state.cartItems.findIndex((product) => product.id === id);
+
+      const newCartItmes = state.cartItems;
+
+      if (value === "inc") {
+        newCartItmes.splice(index, 1, {
+          ...foundProduct,
+          quantity: foundProduct.quantity + 1,
+        });
+
+        return {
+          totalPrice: state.totalPrice + foundProduct.price,
+          totalQantity: state.totalQantity + 1,
+          cartItems: newCartItmes,
+        };
+      }
+
+      if (value === "dec") {
+        if (foundProduct.quantity > 1) {
+          newCartItmes.splice(index, 1, {
+            ...foundProduct,
+            quantity: foundProduct.quantity - 1,
+          });
+
+          return {
+            totalPrice: state.totalPrice - foundProduct.price,
+            totalQantity: state.totalQantity - 1,
+            cartItems: newCartItmes,
+          };
+        }
+      }
+      return { cartItems: [...state.cartItems] };
     }),
 }));
 

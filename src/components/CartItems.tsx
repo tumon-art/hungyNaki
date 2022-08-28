@@ -3,13 +3,13 @@ import useStore from "../store/mainStore";
 import { RiCloseLine } from "react-icons/ri";
 
 const CartItems = () => {
-  const { cartItems, onRemove } = useStore();
+  const { cartItems, onRemove, toggleQuantity } = useStore();
   console.log(cartItems);
   return (
-    <div className=" px-2 py-2 flex flex-col gap-y-4">
+    <div className="flex flex-col gap-y-4">
       {cartItems.map((product) => {
         return (
-          <div key={product.id} className=" flex gap-2">
+          <div key={product.id} className=" px-2 py-2  shadow-md  flex gap-2">
             <div>
               <Image src={product.image01} height="40" width="40" alt="img" />
             </div>
@@ -17,7 +17,7 @@ const CartItems = () => {
             <span className=" font-rockNroll text-[12px]">
               <p>{product.title}</p>
               <div
-                className=" flex gap-1
+                className=" w-28 flex  justify-between my-2
               0 font-sans"
               >
                 <span> {product.quantity}x </span>
@@ -26,15 +26,40 @@ const CartItems = () => {
                 </span>
               </div>
 
-              <div className=" bg-red-100 w-28">INC DEC</div>
-            </span>
+              {/* === INC / DEC */}
+              <div
+                className=" flex font-sans text-lg justify-between
+               px-2 items-center   bg-red-50 w-44"
+              >
+                <span
+                  className=" cursor-pointer"
+                  onClick={() => {
+                    toggleQuantity(product.id, "dec");
+                  }}
+                >
+                  -
+                </span>
 
-            <span
-              onClick={() => onRemove(product)}
-              className=" absolute right-10 text-white rounded-sm
+                <span className=" text-sm">1</span>
+
+                <span
+                  className=" cursor-pointer"
+                  onClick={() => {
+                    toggleQuantity(product.id, "inc");
+                  }}
+                >
+                  +
+                </span>
+
+                {/* ==== DELETE ITEM */}
+                <span
+                  onClick={() => onRemove(product.id)}
+                  className="  cursor-pointer text-white rounded-sm
              bg-red-500 self-center"
-            >
-              <RiCloseLine />
+                >
+                  <RiCloseLine />
+                </span>
+              </div>
             </span>
           </div>
         );

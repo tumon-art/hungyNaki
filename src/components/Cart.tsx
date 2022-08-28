@@ -26,6 +26,10 @@ const Cart = () => {
         className="absolute  right-0 top-0 h-[100vh] w-full"
         onClick={setCart}
       ></div>
+      <div
+        className=" absolute right-40 bg-rose-200 opacity-40 
+      h-full blur-3xl w-3/6 md:w-2/6"
+      ></div>
       <aside
         className={` ${cart ? "translate-x-0" : "translate-x-80"}
         right-0  absolute transition-transform flex flex-col
@@ -40,9 +44,15 @@ const Cart = () => {
             />
           </div>
 
-          <CartItems />
+          <div className=" h-[90vh] overflow-auto">
+            <CartItems />
+          </div>
 
-          <footer className=" absolute justify-between px-3 text-white font-rockNroll bottom-0 flex items-center bg-red-600 h-14 w-full">
+          <footer
+            className=" absolute justify-between  px-3
+           text-white font-rockNroll bottom-0 flex items-center
+            bg-red-600 h-14 w-full"
+          >
             <div className=" flex items-center gap-1">
               <span>Subtotal: {``} </span>
               <span className=" text-xl">${totalPrice}</span>
