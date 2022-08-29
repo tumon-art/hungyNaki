@@ -91,7 +91,7 @@ const Navbar = () => {
           <TopNav />
 
           <div className=" pr-2 flex gap-4 items-center text-xl">
-            <span className=" relative">
+            <span onClick={setCart} className=" relative">
               <RiShoppingBasketLine className=" text-xl" />
               <span
                 className=" absolute bg-red-500

@@ -23,7 +23,7 @@ const Popular = () => {
   const [Select, setSelect] = useState("All");
   const [sort, setsort] = useState("");
 
-  const { setCartItems } = useStore();
+  const setCartItems = useStore((state) => state.setCartItems);
 
   const filterd = products.filter((products) => {
     if (sort == "") return products;

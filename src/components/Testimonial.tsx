@@ -11,7 +11,7 @@ const list = [
          Impedit consectetur illum aliquid odit. 
          Odit dolore ipsum quod debitis nostrum 
          necessitatibus quis dolorem quas!"`,
-    img: "/ava-1.jpg",
+    img: "/ava-1.webp",
     name: "Jhon Doe",
   },
   {
@@ -20,7 +20,7 @@ const list = [
          Impedit consectetur illum aliquid odit. 
          Odit dolore ipsum quod debitis nostrum 
          necessitatibus quis dolorem quas!"`,
-    img: "/ava-2.jpg",
+    img: "/ava-2.webp",
     name: "Mitchell Marsh",
   },
   {
@@ -29,7 +29,7 @@ const list = [
          Impedit consectetur illum aliquid odit. 
          Odit dolore ipsum quod debitis nostrum 
          necessitatibus quis dolorem quas!"`,
-    img: "/ava-3.jpg",
+    img: "/ava-3.webp",
     name: "Steven Crock",
   },
 ];
@@ -93,7 +93,7 @@ const Testimonial = () => {
 
       <div className=" flex justify-center">
         <Image
-          src="/network.png"
+          src="/network.webp"
           width="460"
           height="460"
           alt="img"

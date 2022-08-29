@@ -81,7 +81,7 @@ const Hero = () => {
                 lg:h-[450px] lg:w-[450px] relative"
         >
           <Image
-            src="/hero.png"
+            src="/hero.webp"
             layout="fill"
             alt="hero banner"
             className=" object-fill"

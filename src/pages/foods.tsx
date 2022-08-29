@@ -51,7 +51,7 @@ const Foods: NextPage = () => {
     <section className="">
       <div className=" w-full h-28 md:h-48 z-[-1] overflow-hidden relative">
         <Image
-          src="/allfoods.jpg"
+          src="/allfoods.webp"
           height="15"
           width="100"
           layout="fill"
