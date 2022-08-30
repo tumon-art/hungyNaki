@@ -5,10 +5,12 @@ import { Toaster } from "react-hot-toast";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Layout>
-      <Toaster />
-      <Component {...pageProps} />
-    </Layout>
+    <>
+      <Layout>
+        <Toaster />
+        <Component {...pageProps} />
+      </Layout>
+    </>
   );
 }
 

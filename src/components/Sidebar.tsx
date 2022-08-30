@@ -1,4 +1,4 @@
-import { IoMdClose } from "react-icons/io";
+import { RiCloseLine } from "react-icons/ri";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { list } from "../data/list";
@@ -37,7 +37,7 @@ const Sidebar = () => {
                 `}
       >
         <div className=" bg-red-50  flex items-center justify-center">
-          <IoMdClose
+          <RiCloseLine
             onClick={sidebarSwitch}
             className=" text-xl cursor-pointer  bg-red-600 rounded-full
                          my-4 ring-2 z-10 ring-red-600  text-white

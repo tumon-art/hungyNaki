@@ -1,11 +1,10 @@
-import { IoMdClose } from "react-icons/io";
+import { RiCloseLine } from "react-icons/ri";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { list } from "../data/list";
 import Link from "next/link";
 import useStore from "../store/mainStore";
 import CartItems from "./CartItems";
-
 const Cart = () => {
   const { cart, setCart, totalPrice } = useStore();
   useEffect(() => {
@@ -19,7 +18,7 @@ const Cart = () => {
 
   return (
     <div
-      className={` absolute h-[100vh] sidebar w-[100vw] z-10 top-0
+      className={` absolute h-[100vh] sidebar left-0 w-[100vw] z-40 top-0
       ${cart ? "translate-x-0" : " translate-x-[2000px]"}`}
     >
       <div
@@ -37,7 +36,7 @@ const Cart = () => {
       >
         <div className=" relative w-full h-full">
           <div className=" bg-red-100  flex items-center justify-center">
-            <IoMdClose
+            <RiCloseLine
               onClick={setCart}
               className=" text-xl cursor-pointer  bg-red-600 rounded-full
             my-4 ring-2 z-10 ring-red-600  text-white"

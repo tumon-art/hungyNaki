@@ -17,7 +17,7 @@ const Pagination = ({
   }
 
   return (
-    <div className=" flex justify-center gap-4 items-center my-5">
+    <div className=" flex justify-center gap-4 items-center my-20">
       <div
         className=" cursor-pointer hover:bg-red-800 
          bg-red-600 text-white px-1 pb-[2px]"

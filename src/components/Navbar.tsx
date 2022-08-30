@@ -10,7 +10,7 @@ const Navbar = () => {
   const [position, setPosition] = useState<number>(0);
   const [visible, setVisible] = useState<boolean>(true);
 
-  useEffect(() => setPosition(window.scrollY), []);
+  // useEffect(() => setPosition(window.scrollY), []);
 
   // useEffect(() => {
   //   const handleScroll = () => {
@@ -29,11 +29,10 @@ const Navbar = () => {
 
   //   window.addEventListener("scroll", handleScroll);
   //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, [position]);
+  // }, []);
 
   return (
     <>
-      <Cart />
       <div
         className={` transition-all z-30 top-0 bg-white w-full lg:px-32 md:px-10
       md:py-4 py-1 flex justify-between ${position > 200 && " shadow-md"}`}
@@ -66,7 +65,7 @@ const Navbar = () => {
             className=" cursor-pointer md:hidden"
           />
         </div>
-
+        <Cart />
         <Sidebar />
       </div>
 
@@ -108,6 +107,7 @@ const Navbar = () => {
               className=" cursor-pointer md:hidden"
             />
           </div>
+          <Cart />
           <Sidebar />
         </div>
       )}
