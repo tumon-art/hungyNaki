@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
+import Desc from "../../components/foodsId/Desc";
 import FoodNav from "../../components/foodsId/FoodNav";
 import Images from "../../components/foodsId/Images";
 import { Products } from "../../components/Products";
@@ -28,7 +29,6 @@ export default function FoodsId({ item }: { item: Products }) {
           {item.title}
         </span>
       </div>
-
       <div className=" md:flex md:ml-32">
         <div>
           <Images
@@ -42,6 +42,8 @@ export default function FoodsId({ item }: { item: Products }) {
 
         <FoodNav item={item} />
       </div>
+      {/* === DESCRIPTTION REVIEW */}
+      <Desc item={item} />
     </>
   );
 }
