@@ -23,7 +23,7 @@ import {
 
 const products: Products[] = [
   {
-    id: "01",
+    id: "1",
     title: "Chicken Burger",
     price: 44,
     image01: product_01_image_01,
@@ -36,7 +36,7 @@ const products: Products[] = [
   },
 
   {
-    id: "02",
+    id: "2",
     title: "Vegetarian Pizza",
     price: 115,
     image01: product_02_image_01,
@@ -49,7 +49,7 @@ const products: Products[] = [
   },
 
   {
-    id: "03",
+    id: "3",
     title: "Double Cheese Margherita",
     price: 110,
     image01: product_03_image_01,
@@ -62,7 +62,7 @@ const products: Products[] = [
   },
 
   {
-    id: "04",
+    id: "4",
     title: "Maxican Green Wave",
     price: 110,
     image01: product_04_image_01,
@@ -75,7 +75,7 @@ const products: Products[] = [
   },
 
   {
-    id: "05",
+    id: "5",
     title: "Cheese Burger",
     price: 20,
     image01: product_05_image_01,
@@ -87,7 +87,7 @@ const products: Products[] = [
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
   },
   {
-    id: "06",
+    id: "6",
     title: "Royal Cheese Burger",
     price: 76,
     image01: product_01_image_01,
@@ -100,7 +100,7 @@ const products: Products[] = [
   },
 
   {
-    id: "07",
+    id: "7",
     title: "Seafood Pizza",
     price: 99,
     image01: product_02_image_02,
@@ -113,7 +113,7 @@ const products: Products[] = [
   },
 
   {
-    id: "08",
+    id: "8",
     title: "Thin Cheese Pizza",
     price: 100,
     image01: product_03_image_02,
@@ -125,17 +125,18 @@ const products: Products[] = [
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
   },
 
-  // {
-  //   id: "09",
-  //   title: "Pizza With Mushroom",
-  //   price: 110.0,
-  //   image01: product_04_image_02,
-  //   image02: product_04_image_01,
-  //   image03: product_04_image_03,
-  //   category: "Pizza",
+  {
+    id: "9",
+    title: "Pizza With Mushroom",
+    price: 110.0,
+    image01: product_04_image_02,
+    image02: product_04_image_01,
+    image03: product_04_image_03,
+    category: "Pizza",
+    quantity: 1,
 
-  //   desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
-  // },
+    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
+  },
 
   {
     id: "10",

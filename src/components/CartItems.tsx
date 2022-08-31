@@ -4,7 +4,6 @@ import { RiCloseLine } from "react-icons/ri";
 
 const CartItems = () => {
   const { cartItems, onRemove, toggleQuantity } = useStore();
-  console.log(cartItems);
   return (
     <div className="flex flex-col gap-y-4">
       {cartItems.map((product) => {

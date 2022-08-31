@@ -78,7 +78,7 @@ const Hero = () => {
         <div
           className=" flex h-[280px] w-[280px] 
 
-                lg:h-[450px] lg:w-[450px] relative"
+                lg:h-[450px] lg:w-[450px] relative "
         >
           <Image
             src="/hero.webp"

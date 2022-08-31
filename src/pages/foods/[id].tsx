@@ -1,21 +1,16 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
+import FoodNav from "../../components/foodsId/FoodNav";
 import Images from "../../components/foodsId/Images";
 import { Products } from "../../components/Products";
 import products from "../../data/products";
 
-export default function FoodsId() {
-  const router = useRouter();
-  const pid = router.query.id;
-
-  const item = products.filter((product) => product.id === pid);
+export default function FoodsId({ item }: { item: Products }) {
   return (
     <>
       <div className=" w-full h-28 md:h-48 z-[-1] overflow-hidden relative">
         <Image
           src="/allfoods.webp"
-          height="15"
-          width="100"
           layout="fill"
           alt="allfoods"
           className=" relative object-cover"
@@ -30,21 +25,62 @@ export default function FoodsId() {
            ml-14 md:ml-28 absolute top-0 bottom-0 my-auto font-rockNroll
          text-3xl font-extrabold md:text-4xl text-white"
         >
-          {item[0].title}
+          {item.title}
         </span>
       </div>
 
-      <div>
+      <div className=" md:flex md:ml-32">
         <div>
           <Images
             images={{
-              image01: item[0].image01,
-              image02: item[0].image02,
-              image03: item[0].image03,
+              image01: item.image01,
+              image02: item.image02,
+              image03: item.image03,
             }}
           />
         </div>
+
+        <FoodNav item={item} />
       </div>
     </>
   );
 }
+
+export const getStaticPaths = async () => {
+  const arr = [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+  ];
+
+  const paths: any = arr.map((e) => {
+    return {
+      params: {
+        id: e,
+      },
+    };
+  });
+
+  return {
+    paths,
+    fallback: false,
+  };
+};
+
+export const getStaticProps = async ({ params }: any) => {
+  const filtered = products.filter((product) => product.id === params.id);
+  const item = filtered[0];
+  return {
+    props: { item },
+  };
+};
