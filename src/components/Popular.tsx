@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import products from "../data/products";
 import useStore from "../store/mainStore";
@@ -85,15 +86,18 @@ const Popular = () => {
                 ring-1 ring-red-100 flex flex-col justify-center rounded-sm
                 hover:ring-2 hover:ring-red-500 transition"
               >
-                <div className=" flex flex-col items-center ">
-                  <Image
-                    src={product.image01}
-                    height="70"
-                    width="70"
-                    alt="img"
-                  />
-                  <p className=" mt-6 text-xs">{product.title}</p>
-                </div>
+                <Link href={`foods/${product.id}`}>
+                  <a className=" flex flex-col items-center ">
+                    <Image
+                      src={product.image01}
+                      height="70"
+                      width="70"
+                      alt="img"
+                    />
+                    <p className=" mt-6 text-xs">{product.title}</p>
+                  </a>
+                </Link>
+
                 <div className=" bottom-3 mt-8 text-center flex justify-between items-center mx-2">
                   <span className=" text-md font-medium font-sans text-red-600">
                     ${Math.floor(product.price)}
