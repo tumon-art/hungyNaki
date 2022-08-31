@@ -50,7 +50,7 @@ const products: Products[] = [
 
   {
     id: "3",
-    title: "Double Cheese Margherita",
+    title: "Cheese Margherita",
     price: 110,
     image01: product_03_image_01,
     image02: product_03_image_02,
