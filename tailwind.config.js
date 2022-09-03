@@ -7,7 +7,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        dimWhite: "rgba(255, 255, 255, 0.7)",
+        primary: "#dc2626",
+        primaryDim: "#b51111",
+        dim: "#fee2e2",
       },
       fontFamily: {
         rockNroll: ["RocknRoll One", "cursive"],

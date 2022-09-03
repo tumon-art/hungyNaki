@@ -1,5 +1,3 @@
-import { Products } from "../components/Products";
-
 import {
   product_01_image_01,
   product_01_image_02,
@@ -20,6 +18,7 @@ import {
   product_06_image_02,
   product_06_image_03,
 } from "../../public";
+import { Products } from "../@types";
 
 const products: Products[] = [
   {
@@ -138,21 +137,21 @@ const products: Products[] = [
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
   },
 
+  // {
+  //   id: "10",
+  //   title: "Classic Hamburger",
+  //   price: 33,
+  //   image01: product_05_image_02,
+  //   image02: product_05_image_01,
+  //   image03: product_05_image_03,
+  //   category: "Burger",
+  //   quantity: 1,
+
+  //   desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
+  // },
+
   {
     id: "10",
-    title: "Classic Hamburger",
-    price: 33,
-    image01: product_05_image_02,
-    image02: product_05_image_01,
-    image03: product_05_image_03,
-    category: "Burger",
-    quantity: 1,
-
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
-  },
-
-  {
-    id: "11",
     title: "Crunchy Bread ",
     price: 35,
     image01: product_06_image_01,
@@ -165,7 +164,7 @@ const products: Products[] = [
   },
 
   {
-    id: "12",
+    id: "11",
     title: "Delicious Bread ",
     price: 45,
     image01: product_06_image_02,
@@ -178,7 +177,7 @@ const products: Products[] = [
   },
 
   {
-    id: "13",
+    id: "12",
     title: "Loaf Bread ",
     price: 55,
     image01: product_06_image_03,

@@ -21,7 +21,7 @@ const Hero = () => {
             className=" pt-1 text-2xl md:text-4xl md:my-4 my-2 
                   text-slate-800  font-extrabold "
           >
-            <span className="  text-red-600">HUNGRY? {` `}</span>
+            <span className=" text-primary">HUNGRY? {` `}</span>
             Just wait
           </p>
 
@@ -30,7 +30,7 @@ const Hero = () => {
                     md:my-4 my-2 "
           >
             food at {` `}
-            <span className=" text-red-600">your door</span>
+            <span className=" text-primary">your door</span>
           </p>
         </div>
         <p
@@ -44,15 +44,15 @@ const Hero = () => {
         <div className=" flex gap-14 my-6">
           <button
             className=" flex items-center transition md:font-bold
-                hover:bg-gray-700 text-xs  bg-red-600  md:py-[9px] md:px-6 
+                hover:bg-gray-700 text-xs  bg-primary  md:py-[9px] md:px-6 
                 px-3 py-1 rounded text-white"
           >
             <span> Order now</span> <RiArrowRightSLine className=" mt-[2px]" />
           </button>
 
           <button
-            className="text-xs md:font-bold  text-red-500
-                ring-1 ring-red-500 md:py-[9px] md:px-6  px-3 py-1 rounded"
+            className="text-xs md:font-bold  text-primary
+                ring-1 ring-primary md:py-[9px] md:px-6  px-3 py-1 rounded"
           >
             See all foods
           </button>
@@ -60,13 +60,13 @@ const Hero = () => {
 
         <div className="flex gap-3 md:gap-5 md:text-sm text-xs mt-5">
           <p className="  flex font-medium text-slate-800 gap-2 items-center">
-            <span className=" bg-red-600 p-[6px] rounded-full">
+            <span className=" bg-primary p-[6px] rounded-full">
               <RiCarLine className=" text-white" />
             </span>
             No shipping charge
           </p>
           <p className=" flex  font-medium text-slate-800 gap-2 items-center">
-            <span className=" bg-red-600 p-[6px] rounded-full">
+            <span className=" bg-primary p-[6px] rounded-full">
               <RiShieldCheckLine className=" text-white" />
             </span>
             100% secure checkout

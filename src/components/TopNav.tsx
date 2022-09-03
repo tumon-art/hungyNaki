@@ -14,10 +14,9 @@ const TopNav = () => {
           <li
             key={i}
             className={`${
-              e.link == router.asPath &&
-              " border-b-2 border-red-600 text-red-600"
+              e.link == router.asPath && " border-b-2  border-primary"
             }
-                    cursor-pointer hover:text-red-500`}
+                    cursor-pointer hover:text-primary`}
           >
             <Link href={e.link}>
               <a>{e.name}</a>

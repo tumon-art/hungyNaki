@@ -1,6 +1,6 @@
 import create from "zustand";
-import { Products } from "../components/Products";
 import { toast } from "react-hot-toast";
+import { Products } from "../@types";
 import products from "../data/products";
 
 interface Store {

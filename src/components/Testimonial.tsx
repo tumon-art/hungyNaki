@@ -51,12 +51,12 @@ const Testimonial = () => {
          md:grid-cols-2"
     >
       <div className=" my-10 px-3 font-rockNroll">
-        <h3 className=" text-1xl md:text-2xl md:font-extrabold text-red-600">
+        <h3 className=" text-1xl md:text-2xl md:font-extrabold  text-primary">
           Testimonial
         </h3>
         <h1 className=" md:text-3xl md:font-extrabold my-4 text-slate-800 font-medium text-2xl">
           What our {` `}
-          <span className=" text-red-600">customers</span>
+          <span className="  text-primary">customers</span>
           {` `} are saying
         </h1>
 

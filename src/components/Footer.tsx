@@ -9,7 +9,7 @@ import {
 
 const Footer = () => {
   return (
-    <section id="footer" className="px-4 md:px-20 py-10  bg-red-100">
+    <section id="footer" className="px-4 md:px-20 py-10  bg-dim">
       <div
         className="  font-sans flex-wrap flex md:flex-row
        justify-center flex-col gap-10 "
@@ -69,7 +69,7 @@ const Footer = () => {
             <p className=" mb-5 font-sans ">Subscribe our newsletter</p>
 
             <div className="flex flex-col items-center">
-              <div className="  py-1 px-2  border-red-600 rounded-m border-b-4">
+              <div className="  py-1 px-2 border-primary rounded-m border-b-4">
                 <input
                   className=" text-xs placeholder:text-center
                 w-48 font-sans outline-none bg-transparent"
@@ -78,8 +78,8 @@ const Footer = () => {
               </div>
               <span
                 className=" right-2 flex w-14 h-8 top-0 bottom-0 my-auto py-1 px-1 
-                 ml-2 hover:bg-rose-700 cursor-pointer
-            bg-red-600 text-white justify-center items-center"
+                 ml-2 hover:bg-primaryDim cursor-pointer
+             bg-primary text-white justify-center items-center"
               >
                 <RiSendPlaneLine className=" text-center" />
               </span>

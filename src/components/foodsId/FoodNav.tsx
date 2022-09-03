@@ -1,5 +1,5 @@
+import { Products } from "../../@types";
 import useStore from "../../store/mainStore";
-import { Products } from "../Products";
 
 const FoodNav = ({ item }: { item: Products }) => {
   const { setCartItems } = useStore();

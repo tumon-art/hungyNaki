@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { useRouter } from "next/router";
+import { Products } from "../../@types";
 import Desc from "../../components/foodsId/Desc";
 import FoodNav from "../../components/foodsId/FoodNav";
 import Images from "../../components/foodsId/Images";
-import { Products } from "../../components/Products";
+import MayLike from "../../components/foodsId/MayLike";
 import products from "../../data/products";
 
 export default function FoodsId({ item }: { item: Products }) {
@@ -29,21 +29,30 @@ export default function FoodsId({ item }: { item: Products }) {
           {item.title}
         </span>
       </div>
-      <div className=" md:flex md:ml-32">
-        <div>
-          <Images
-            images={{
-              image01: item.image01,
-              image02: item.image02,
-              image03: item.image03,
-            }}
-          />
-        </div>
 
-        <FoodNav item={item} />
+      <div className=" ml-4 md:mx-32">
+        <div className=" md:flex md:mx-6">
+          <div>
+            <Images
+              images={{
+                image01: item.image01,
+                image02: item.image02,
+                image03: item.image03,
+              }}
+            />
+          </div>
+
+          <FoodNav item={item} />
+        </div>
+        {/* === DESCRIPTTION REVIEW */}
+        <Desc item={item} />
+
+        <MayLike
+          products={products.filter(
+            (products) => products.category === item.category
+          )}
+        />
       </div>
-      {/* === DESCRIPTTION REVIEW */}
-      <Desc item={item} />
     </>
   );
 }

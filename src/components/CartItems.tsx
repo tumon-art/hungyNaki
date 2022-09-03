@@ -20,7 +20,7 @@ const CartItems = () => {
               0 font-sans"
               >
                 <span> {product.quantity}x </span>
-                <span className=" text-red-600">
+                <span className="  text-primary">
                   ${product.quantity * product.price}
                 </span>
               </div>
@@ -39,7 +39,7 @@ const CartItems = () => {
                   -
                 </span>
 
-                <span className=" text-sm">1</span>
+                <span className=" text-sm">{product.quantity}</span>
 
                 <span
                   className=" cursor-pointer"
@@ -54,7 +54,7 @@ const CartItems = () => {
                 <span
                   onClick={() => onRemove(product.id)}
                   className="  cursor-pointer text-white rounded-sm
-             bg-red-500 self-center"
+              bg-primary self-center"
                 >
                   <RiCloseLine />
                 </span>

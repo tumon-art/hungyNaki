@@ -1,8 +1,8 @@
-import { Products } from "../Products";
+import { Products } from "../../@types";
 
 const Desc = ({ item }: { item: Products }) => {
   return (
-    <div className=" mx-4 my-10">
+    <div className=" my-10">
       <div className=" mb flex gap-10">
         <h2 className=" font-rockNroll  text-lg ">Description</h2>
         <h2 className=" font-rockNroll  text-lg text-red-600">Review</h2>

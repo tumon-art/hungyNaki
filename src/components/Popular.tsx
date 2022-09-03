@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import products from "../data/products";
-import useStore from "../store/mainStore";
+import ShowItems from "./showItems/ShowItems";
 
 const list = [
   { text: "All" },
@@ -24,8 +24,6 @@ const Popular = () => {
   const [Select, setSelect] = useState("All");
   const [sort, setsort] = useState("");
 
-  const setCartItems = useStore((state) => state.setCartItems);
-
   const filterd = products.filter((products) => {
     if (sort == "") return products;
     if (sort == "All") return products;
@@ -42,7 +40,7 @@ const Popular = () => {
           Popular Foods
         </h1>
 
-        <div className="  bg-red-600 rounded-md my-10">
+        <div className="   bg-primary rounded-md my-10">
           <ol
             className=" font-sans text-white text-xs py-4 font-medium flex 
                 justify-center"
@@ -52,7 +50,7 @@ const Popular = () => {
                 <li
                   key={i}
                   className={` 
-                  ${Select == e.text && " text-red-600 bg-white"}
+                  ${Select == e.text && " text-primary bg-white"}
                   cursor-pointer flex gap-2 items-center px-3 py-1 mx-3 
                   rounded-md hover:underline`}
                   onClick={() => {
@@ -77,43 +75,7 @@ const Popular = () => {
         </div>
 
         {/* === SHOW ALL FOOD */}
-        <div className=" grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 justify-items-center md:gap-8 lg:gap-14 gap-3 ">
-          {filterd.map((product, i) => {
-            return (
-              <div
-                key={product.id}
-                className=" relative w-40 h-48  sm:w-48 sm:h-48 
-                ring-1 ring-red-100 flex flex-col justify-center rounded-sm
-                hover:ring-2 hover:ring-red-500 transition"
-              >
-                <Link href={`foods/${product.id}`}>
-                  <a className=" flex flex-col items-center ">
-                    <Image
-                      src={product.image01}
-                      height="70"
-                      width="70"
-                      alt="img"
-                    />
-                    <p className=" mt-6 text-xs">{product.title}</p>
-                  </a>
-                </Link>
-
-                <div className=" bottom-3 mt-8 text-center flex justify-between items-center mx-2">
-                  <span className=" text-md font-medium font-sans text-red-600">
-                    ${Math.floor(product.price)}
-                  </span>
-                  <button
-                    onClick={() => setCartItems(product, 1)}
-                    className=" font-sans text-white bg-red-600 px-3 py-[6px] 
-                    text-xs rounded cursor-pointer hover:bg-red-700"
-                  >
-                    Add to Cart
-                  </button>
-                </div>
-              </div>
-            );
-          })}
-        </div>
+        <ShowItems products={filterd} />
       </div>
     </section>
   );

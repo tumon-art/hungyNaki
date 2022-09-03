@@ -31,7 +31,7 @@ const WhyHungry = () => {
       </div>
 
       <div>
-        <h1 className=" font-rockNroll text-2xl md:text-3xl my-8 font-bold text-red-600">
+        <h1 className=" font-rockNroll text-2xl md:text-3xl my-8 font-bold text-primary">
           <span className=" text-slate-800">Why {` `}</span>
           HungryNaki?
         </h1>
@@ -51,7 +51,7 @@ const WhyHungry = () => {
                   className=" font-medium flex items-center gap-2 
                                  md:text-base  text-sm"
                 >
-                  <RiCheckboxLine className=" text-red-600" />
+                  <RiCheckboxLine className=" text-primary" />
                   {e.title}
                 </span>
                 <p className=" md:text-sm py-2 text-[10px] text-gray-500">

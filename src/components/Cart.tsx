@@ -5,6 +5,7 @@ import { list } from "../data/list";
 import Link from "next/link";
 import useStore from "../store/mainStore";
 import CartItems from "./CartItems";
+import toast from "react-hot-toast";
 const Cart = () => {
   const { cart, setCart, totalPrice } = useStore();
   useEffect(() => {
@@ -26,7 +27,7 @@ const Cart = () => {
         onClick={setCart}
       ></div>
       <div
-        className=" absolute right-40 bg-rose-200 opacity-40 
+        className=" absolute right-40 bg-dim opacity-40 
       h-full blur-3xl w-3/6 md:w-2/6"
       ></div>
       <aside
@@ -35,11 +36,11 @@ const Cart = () => {
         duration-200 top-0 bg-white h-[100vh]  w-4/6 md:w-2/6`}
       >
         <div className=" relative w-full h-full">
-          <div className=" bg-red-100  flex items-center justify-center">
+          <div className=" bg-dim  flex items-center justify-center">
             <RiCloseLine
               onClick={setCart}
-              className=" text-xl cursor-pointer  bg-red-600 rounded-full
-            my-4 ring-2 z-10 ring-red-600  text-white"
+              className=" text-xl cursor-pointer  bg-primary rounded-full
+            my-4 ring-2 z-10 ring-primary  text-white"
             />
           </div>
 
@@ -50,7 +51,7 @@ const Cart = () => {
           <footer
             className=" absolute justify-between  px-3
            text-white font-rockNroll bottom-0 flex items-center
-            bg-red-600 h-14 w-full"
+            bg-primary h-14 w-full"
           >
             <div className=" flex items-center gap-1">
               <span>Subtotal: {``} </span>
@@ -58,6 +59,7 @@ const Cart = () => {
             </div>
 
             <button
+              onClick={() => toast.error(`It's Demo`)}
               className=" bg-white 
             px-2 pb-[2px] rounded-md text-gray-900"
             >

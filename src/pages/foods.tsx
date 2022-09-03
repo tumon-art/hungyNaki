@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { RiSearchLine } from "react-icons/ri";
 import Pagination from "../components/Pagination";
-import Products from "../components/Products";
+import ShowItems from "../components/showItems/ShowItems";
 import products from "../data/products";
 
 const Foods: NextPage = () => {
@@ -108,7 +108,8 @@ const Foods: NextPage = () => {
             </select>
           </div>
         </div>
-        <Products
+
+        <ShowItems
           products={
             searchText.length > 0
               ? products.filter((e) =>
@@ -116,6 +117,7 @@ const Foods: NextPage = () => {
                 )
               : currentPosts
           }
+          flex
         />
         <Pagination
           currentPage={currentPage}
