@@ -2,7 +2,6 @@ import { Products } from "../../@types";
 import ShowItems from "../showItems/ShowItems";
 
 const MayLike = ({ products }: { products: Products[] }) => {
-  console.log(products);
   return (
     <div>
       <h1 className=" font-rockNroll font-bold text-xl">You may also like</h1>

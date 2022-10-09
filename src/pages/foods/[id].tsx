@@ -7,6 +7,7 @@ import MayLike from "../../components/foodsId/MayLike";
 import products from "../../data/products";
 
 export default function FoodsId({ item }: { item: Products }) {
+  
   return (
     <>
       <div className=" w-full h-28 md:h-48 z-[-1] overflow-hidden relative">
