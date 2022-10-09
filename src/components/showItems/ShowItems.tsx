@@ -34,7 +34,7 @@ const ShowItems = ({
         ring-1  ring-dim flex flex-col justify-center rounded-sm
         hover:ring-2 hover:ring-primary transition"
           >
-            <Link href={`foods/${product.id}`}>
+            <Link href={`/foods/${product.id}`}>
               <a className=" flex flex-col items-center ">
                 <Image src={product.image01} height="70" width="70" alt="img" />
                 <p className=" mt-6 text-xs">{product.title}</p>
