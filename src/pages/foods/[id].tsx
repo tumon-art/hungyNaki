@@ -72,7 +72,6 @@ export const getStaticPaths = async () => {
     "10",
     "11",
     "12",
-    "13",
   ];
 
   const paths: any = arr.map((e) => {
