@@ -144,7 +144,7 @@ const products: Products[] = [
   //   image01: product_05_image_02,
   //   image02: product_05_image_01,
   //   image03: product_05_image_03,
-  //   category: "Burger",
+  //   category: "Burger"s,
   //   quantity: 1,
 
   //   desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ad et est, fugiat repudiandae neque illo delectus commodi magnam explicabo autem voluptates eaque velit vero facere mollitia. Placeat rem, molestiae error obcaecati enim doloribus impedit aliquam, maiores qui minus neque.",
