@@ -28,7 +28,7 @@ const Images = ({ images }: Images) => {
           <span
             onClick={() => setorder(images.image01)}
             className=" cursor-pointer md:h-20 md:w-20 h-12 w-12 
-          rounded-full  ring-red-600  relative "
+            rounded-full  ring-red-600  relative "
           >
             <Image
               src={images.image01}
@@ -40,8 +40,8 @@ const Images = ({ images }: Images) => {
           <span
             onClick={() => setorder(images.image02)}
             className=" 
-          cursor-pointer md:h-20 md:w-20 h-12 w-12 
-          rounded-full  ring-red-600  relative "
+            cursor-pointer md:h-20 md:w-20 h-12 w-12 
+            rounded-full  ring-red-600  relative "
           >
             <Image
               src={images.image02}
@@ -53,8 +53,8 @@ const Images = ({ images }: Images) => {
           <span
             onClick={() => setorder(images.image03)}
             className="
-          cursor-pointer md:h-20 md:w-20 h-12 w-12 
-          rounded-full  ring-red-600 relative "
+            cursor-pointer md:h-20 md:w-20 h-12 w-12 
+            rounded-full  ring-red-600 relative "
           >
             <Image
               src={images.image03}
@@ -65,7 +65,6 @@ const Images = ({ images }: Images) => {
           </span>
         </span>
 
-        <div></div>
       </div>
     </div>
   );

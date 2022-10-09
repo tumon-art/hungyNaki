@@ -7,7 +7,7 @@ import MayLike from "../../components/foodsId/MayLike";
 import products from "../../data/products";
 
 export default function FoodsId({ item }: { item: Products }) {
-  
+
   return (
     <>
       <div className=" w-full h-28 md:h-48 z-[-1] overflow-hidden relative">
@@ -35,11 +35,11 @@ export default function FoodsId({ item }: { item: Products }) {
         <div className=" md:flex md:mx-6">
           <div>
             <Images
-              images={{
-                image01: item.image01,
-                image02: item.image02,
-                image03: item.image03,
-              }}
+            images={{
+              image01: item.image01,
+              image02: item.image02,
+              image03: item.image03,
+            }}
             />
           </div>
 
