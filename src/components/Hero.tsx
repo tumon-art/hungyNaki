@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/future/image";
 import {
   RiArrowRightSLine,
   RiCarLine,
@@ -75,18 +75,14 @@ const Hero = () => {
       </div>
 
       <div className=" flex flex-col items-center">
-        <div
-          className=" flex h-[280px] w-[280px] 
-
-                lg:h-[450px] lg:w-[450px] relative "
-        >
-          <Image
-            src="/hero.webp"
-            layout="fill"
-            alt="hero banner"
-            className=" object-fill"
-          />
-        </div>
+        <Image
+          src="/hero.webp"
+          alt="hero banner"
+          width="280"
+          height="280"
+          className="flex h-[280px] w-[280px] 
+            lg:h-[450px] lg:w-[450px] relative object-fill"
+        />
       </div>
     </div>
   );
