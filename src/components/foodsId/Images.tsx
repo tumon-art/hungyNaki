@@ -24,44 +24,35 @@ const Images = ({ images }: Images) => {
         />
         {/* === OTHER IMAGES 3 */}
         <span className=" flex md:flex-col md:order-[-1] gap-5 px-10 py-2 my-3">
-          <span
+          <Image
+            height="48"
+            width="48"
             onClick={() => setorder(images.image01)}
-            className=" cursor-pointer md:h-20 md:w-20 h-12 w-12 
+            className=" object-fill cursor-pointer md:h-20 md:w-20 h-12 w-12 
             rounded-full  ring-red-600  relative "
-          >
-            <Image
-              src={images.image01}
-              layout="fill"
-              alt="food"
-              className=" object-fill"
-            />
-          </span>
-          <span
+            src={images.image01}
+            alt="food"
+          />
+          <Image
             onClick={() => setorder(images.image02)}
-            className=" 
+            className=" object-fill
             cursor-pointer md:h-20 md:w-20 h-12 w-12 
             rounded-full  ring-red-600  relative "
-          >
-            <Image
-              src={images.image02}
-              layout="fill"
-              alt="food"
-              className="object-fill"
-            />
-          </span>
-          <span
+            src={images.image02}
+            height="48"
+            width="48"
+            alt="food"
+          />
+          <Image
             onClick={() => setorder(images.image03)}
             className="
             cursor-pointer md:h-20 md:w-20 h-12 w-12 
-            rounded-full  ring-red-600 relative "
-          >
-            <Image
-              src={images.image03}
-              layout="fill"
-              alt="food"
-              className="object-fill"
-            />
-          </span>
+            rounded-full object-fill ring-red-600 relative "
+            src={images.image03}
+            height="48"
+            width="48"
+            alt="food"
+          />
         </span>
       </div>
     </div>
