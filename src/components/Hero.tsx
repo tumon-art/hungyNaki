@@ -80,6 +80,7 @@ const Hero = () => {
           alt="hero banner"
           width="280"
           height="280"
+          priority
           className="flex h-[280px] w-[280px] 
             lg:h-[450px] lg:w-[450px] relative object-fill"
         />
