@@ -1,4 +1,4 @@
-import Image, { StaticImageData } from "next/image";
+import Image, { StaticImageData } from "next/future/image";
 import { useState } from "react";
 
 interface Images {
@@ -15,14 +15,13 @@ const Images = ({ images }: Images) => {
     <div>
       <div className=" flex flex-col md:flex-row  items-center justify-center">
         {/* === MAIN IMAGE */}
-        <span className=" h-56 md:h-96 md:w-96 w-56 relative ">
-          <Image
-            src={order}
-            layout="fill"
-            alt="food"
-            className=" object-fill"
-          />
-        </span>
+        <Image
+          src={order}
+          height="224"
+          width="224"
+          alt="food"
+          className="h-56 md:h-96 md:w-96 w-56 relative  object-fill"
+        />
         {/* === OTHER IMAGES 3 */}
         <span className=" flex md:flex-col md:order-[-1] gap-5 px-10 py-2 my-3">
           <span
@@ -64,7 +63,6 @@ const Images = ({ images }: Images) => {
             />
           </span>
         </span>
-
       </div>
     </div>
   );
