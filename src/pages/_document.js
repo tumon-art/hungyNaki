@@ -5,6 +5,11 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <title> HungryNaki</title>
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width; viewport-fit=cover"
+          />
           <meta name="mobile-web-app-capable" content="yes" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta
