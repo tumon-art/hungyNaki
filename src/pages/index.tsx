@@ -21,7 +21,7 @@ export default function Home() {
         <title> HungryNaki</title>
         <meta
           name="viewport"
-          content="initial-scale=1.0, width=device-width; viewport-fit=cover"
+          content="initial-scale=1.0, width=device-width, viewport-fit=cover"
         />
       </Head>
       <Hero />
