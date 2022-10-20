@@ -4,7 +4,7 @@
   "display": "standalone",
   "scope": "/",
 
-  "start_url": "",
+  "start_url": "/",
   "name": "Hungry Naki",
   "short_name": "HungryNaki",
   "description": "Food Delivery App",
