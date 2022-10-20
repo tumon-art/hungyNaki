@@ -1,0 +1,6 @@
+[{
+        "relation": ["delegate_permission/common.handle_all_urls"],
+        "target" : { "namespace": "android_app", "package_name": "app.vercel.hungy_naki.twa",
+                     "sha256_cert_fingerprints": ["D6:BA:D1:58:D5:44:E4:4C:71:C2:B5:AE:77:41:C3:95:D9:DF:53:81:32:BC:B1:7A:C0:2F:CD:17:32:E2:96:D9"] }
+      }
+]
