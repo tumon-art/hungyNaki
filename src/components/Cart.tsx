@@ -27,6 +27,7 @@ const Cart = () => {
         onClick={setCart}
       ></div>
       <div
+        onClick={setCart}
         className=" absolute right-40 bg-dim opacity-40 
       h-full blur-3xl w-3/6 md:w-2/6"
       ></div>

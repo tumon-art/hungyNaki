@@ -42,19 +42,21 @@ const Navbar = () => {
        position > 200 ? " md:py-2" : " md:py-4"
      } py-1 fixed flex justify-between ${position > 200 && " shadow-md"}`}
       >
-        <div className=" pl-2 flex flex-col items-center justify-between">
-          <span className=" relative h-9 w-9 lg:h-14 lg:w-14">
-            <Image src="/res-logo.png" layout="fill" alt="logo" />
-          </span>
+        <Link href="/">
+          <div className=" cursor-pointer pl-2 flex flex-col items-center justify-between">
+            <span className=" relative h-9 w-9 lg:h-14 lg:w-14">
+              <Image src="/res-logo.png" layout="fill" alt="logo" />
+            </span>
 
-          <span
-            className={`text-xs sm:text-base font-rockNroll block ${
-              position < 200 ? "block" : "hidden"
-            }`}
-          >
-            HungryNaki
-          </span>
-        </div>
+            <span
+              className={`text-xs sm:text-base font-rockNroll block ${
+                position < 200 ? "block" : "hidden"
+              }`}
+            >
+              HungryNaki
+            </span>
+          </div>
+        </Link>
 
         <TopNav />
 

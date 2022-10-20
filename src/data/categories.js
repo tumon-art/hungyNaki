@@ -12,7 +12,7 @@ export const categories = [
     img: "category-03.png",
   },
   {
-    text: "Pizza",
+    text: "Get Pizza",
     img: "category-02.png",
   },
 ];

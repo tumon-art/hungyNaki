@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/future/image";
 import { categories } from "../data/categories";
 
 const FoodCategory = () => {
@@ -8,9 +8,9 @@ const FoodCategory = () => {
         return (
           <li
             key={i}
-            className="flex transition-all p-4 md:p-6 w-48 gap-3 
-                    text-sm font-medium bg-dim rounded-md cursor-pointer
-                     hover:translate-y-[-10px]   justify-center items-center"
+            className="flex transition-all p-4  md:p-6 w-36 md:w-48 gap-3 
+            text-sm font-medium bg-dim rounded-md cursor-pointer
+            hover:translate-y-[-10px] justify-center items-center"
           >
             <Image src={`/${e.img}`} height="40" width="40" alt="category" />
             <span> {e.text} </span>

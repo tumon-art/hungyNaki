@@ -23,10 +23,11 @@ const Sidebar = () => {
          ${sidebar ? "translate-x-0" : " translate-x-[1000px]"}`}
     >
       <div
-        className="absolute   right-0 top-0 h-[100vh] w-full"
+        className="absolute  right-0 top-0 h-[100vh] w-full"
         onClick={sidebarSwitch}
       ></div>
       <div
+        onClick={sidebarSwitch}
         className=" absolute right-40 bg-rose-200 opacity-40 
       h-full blur-3xl w-3/6 md:w-2/6"
       ></div>

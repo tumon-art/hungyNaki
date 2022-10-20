@@ -8,4 +8,5 @@ module.exports = withPWA({
   reactStrictMode: true,
   swcMinify: true,
   experimental: { images: { allowFutureImage: true } },
+  disable: process.env.NODE_ENV === "development",
 });
