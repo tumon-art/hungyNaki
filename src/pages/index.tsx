@@ -1,4 +1,3 @@
-import Head from "next/head";
 import { useEffect } from "react";
 import Desc2 from "../components/Desc2";
 import FoodCategory from "../components/FoodCategory";
@@ -9,25 +8,13 @@ import Testimonial from "../components/Testimonial";
 import WhyHungry from "../components/WhyHungry";
 
 export default function Home() {
-  let deferredPrompt;
-
   useEffect(() => {
-    window.addEventListener("beforeinstallprompt", (e) => {
-      // Prevent the mini-infobar from appearing on mobile
-      e.preventDefault();
-      // Stash the event so it can be triggered later.
-      deferredPrompt = e;
-      // Update UI notify the user they can install the PWA
-      console.log("showInstallPromotion");
-    });
+    // on Android Chrome
+    window.matchMedia("(display-mode: standalone)").matches;
   }, []);
 
   return (
     <div>
-      <Head>
-        <title> HungryNaki</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
       <Hero />
       <FoodCategory />
       <Desc2 />
