@@ -1,8 +1,8 @@
 {
   "theme_color": "#f63535",
   "background_color": "#f64d35",
-  "display": "standalone",
-  "scope": "/app",
+  "display": "fullscreen",
+  "scope": "/",
 
   "start_url": "/",
   "name": "Hungry Naki",
