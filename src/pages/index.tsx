@@ -15,19 +15,6 @@ export default function Home() {
     window.matchMedia("(display-mode: standalone)").matches;
   }, []);
 
-  function openFullscreen() {
-    document.documentElement.requestFullscreen();
-    // if (elem.requestFullscreen) {
-    //   elem.requestFullscreen();
-    // } else if (elem.requestFullscreen) {
-    //   /* Safari */
-    //   elem.requestFullscreen();
-    // } else if (elem.requestFullscreen) {
-    //   /* IE11 */
-    //   elem.requestFullscreen();
-    // }
-  }
-
   return (
     <div>
       <Head>
@@ -37,7 +24,6 @@ export default function Home() {
           content="initial-scale=1.0, width=device-width; viewport-fit=cover"
         />
       </Head>
-      <h1 onClick={openFullscreen}> Hello</h1>
       <Hero />
       <FoodCategory />
       <Desc2 />
