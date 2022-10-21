@@ -20,7 +20,6 @@ import {
 } from "../../public";
 import { Products } from "../@types";
 
-
 const products: Products[] = [
   {
     id: "1",

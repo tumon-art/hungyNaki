@@ -1,4 +1,5 @@
 import Image from "next/future/image";
+import Link from "next/link";
 import {
   RiArrowRightSLine,
   RiCarLine,
@@ -50,12 +51,14 @@ const Hero = () => {
             <span> Order now</span> <RiArrowRightSLine className=" mt-[2px]" />
           </button>
 
-          <button
-            className="text-xs md:font-bold  text-primary
+          <Link href="/foods">
+            <button
+              className="text-xs md:font-bold  text-primary
                 ring-1 ring-primary md:py-[9px] md:px-6  px-3 py-1 rounded"
-          >
-            See all foods
-          </button>
+            >
+              See all foods
+            </button>
+          </Link>
         </div>
 
         <div className="flex gap-3 md:gap-5 md:text-sm text-xs mt-5">
