@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <section id="footer" className="px-4 md:px-20 md:py-10 py-2 bg-dim">
       <div
-        className="  font-sans flex-wrap flex md:flex-row
+        className=" font-sans flex-wrap flex md:flex-row
        justify-center flex-col gap-10 "
       >
         {/* # 1 */}
@@ -40,8 +40,7 @@ const Footer = () => {
           {/* # 2 */}
           <div className=" w-1/2 flex flex-col gap-2">
             <h1 className=" font-semibold underline underline-offset-4 drop-shadow-2xl text-sm md:text-base">
-              {" "}
-              Delivery Time{" "}
+              Delivery Time
             </h1>
             <h4 className=" text-xs font-sans font-medium">
               Sunday - Thursday
@@ -58,8 +57,7 @@ const Footer = () => {
           <div className=" w-1/2">
             <div className=" flex flex-col gap-2">
               <h3 className=" font-semibold underline underline-offset-4 drop-shadow-2xl text-sm md:text-base">
-                {" "}
-                Contact{" "}
+                Contact
               </h3>
               <p className=" mb-5 font-sans text-[10px]">
                 Location: Feni, Mohipal-3100, Bangladesh
@@ -68,8 +66,7 @@ const Footer = () => {
               <h3 className=" font-sans text-sm"> Phone: 0171234*6*8 </h3>
 
               <h3 className=" font-sans break-words text-sm">
-                {" "}
-                Email: example@gmail.com{" "}
+                Email: example@gmail.com
               </h3>
             </div>
           </div>

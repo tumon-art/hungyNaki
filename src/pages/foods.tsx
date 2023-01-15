@@ -100,8 +100,7 @@ const Foods: NextPage = () => {
               onChange={selectHandle}
             >
               <option disabled value="">
-                {" "}
-                Sort Foods{" "}
+                Sort Foods
               </option>
               <option value={"lowToHigh"}> Low To High </option>
               <option value={"highToLow"}> High To Low </option>
@@ -113,8 +112,8 @@ const Foods: NextPage = () => {
           products={
             searchText.length > 0
               ? products.filter((e) =>
-                  e.title.toLowerCase().includes(searchText)
-                )
+                e.title.toLowerCase().includes(searchText)
+              )
               : currentPosts
           }
           flex
