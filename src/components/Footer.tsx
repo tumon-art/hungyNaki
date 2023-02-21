@@ -115,7 +115,7 @@ const Footer = () => {
           </span>
         </div>
         <p className=" font-sans text-xs text-red-600">
-          Copyright - 2022, website made by 2M0N. All Rights Reserved
+          Copyright - 2023, website made by 2M0N. All Rights Reserved
         </p>
       </div>
     </section>
