@@ -8,21 +8,21 @@ import {
 
 const Hero = () => {
   return (
-    <div className=" md:flex my-20 w-full lg:px-32 md:px-10">
+    <div className=" md:flex my-20 sm:my-32 w-full lg:px-32 md:px-10">
       <div className=" flex flex-col items-center md:items-start">
         <div className=" font-rockNroll">
           <p
             className=" font-bold  text-slate-800
-                     md:my-4 md:text-2xlmy-2"
+            md:my-4 md:text-2xlmy-2"
           >
             Easy way to make an order
           </p>
 
           <p
             className=" pt-1 text-2xl md:text-4xl md:my-4 my-2 
-                  text-slate-800  font-extrabold "
+            text-slate-800  font-extrabold "
           >
-            <span className=" text-primary">HUNGRY? {` `}</span>
+            <span className=" text-primary">HUNGRY? </span>
             Just wait
           </p>
 
@@ -30,13 +30,13 @@ const Hero = () => {
             className="pt-1 font-bold  text-2xl md:text-4xl text-slate-800
                     md:my-4 my-2 "
           >
-            food at {` `}
+            food at
             <span className=" text-primary">your door</span>
           </p>
         </div>
         <p
           className=" text-xs md:text-sm text-center md:text-left md:pr-32
-                sm:px-44 px-10 md:px-0 my-6 text-gray-500"
+          sm:px-44 px-10 md:px-0 my-6 text-gray-500"
         >
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui magni
           delectus tenetur autem, sint veritatis!
@@ -81,11 +81,11 @@ const Hero = () => {
         <Image
           src="/hero.webp"
           alt="hero banner"
-          width="280"
-          height="280"
+          width="580"
+          height="480"
           priority
           className="flex h-[280px] w-[280px] 
-            lg:h-[450px] lg:w-[450px] relative object-fill"
+            lg:h-[450px] lg:w-[560px] relative object-fill"
         />
       </div>
     </div>

@@ -11,7 +11,6 @@ import WhyHungry from "../components/WhyHungry";
 export default function Home() {
   useEffect(() => {
     // on Android Chrome
-
     window.matchMedia("(display-mode: standalone)").matches;
   }, []);
 
